@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    #region Variable
+    private int m_GameDuration;
+    private List<Player> m_PlayerList;
+    #endregion
+
+    #region Getter & Setter
+    #endregion
+
+    #region Private Method
+    #endregion
+
+    #region Public Method
+    public void StartGame()
+    {
+
+    }
+    public void EndGame()
+    {
+
+    }
+    public void SetPlayerSequence()
+    {
+
+    }
+    #endregion
 }

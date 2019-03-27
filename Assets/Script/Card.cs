@@ -4,37 +4,37 @@ using UnityEngine;
 
 public enum E_CardColor { Red, Blue, Yellow, Green, Black, None }
 
-public class Card : ScriptableObject {
+public class Card : ScriptableObject
+{
     #region Variable
     [SerializeField] private int m_CardID;
     [SerializeField] private E_CardColor m_CardColor;
-
-    [Header("Sprite")]
-    [SerializeField] private Sprite m_FrontImage;
-    [SerializeField] private Sprite m_BackImage;
-    [SerializeField] private Sprite m_OverlayTransparent;
-    [SerializeField] private Sprite m_OverlayHighlighted;
-    [SerializeField] private Sprite m_OverlayAvailable;
-
-    [Header("Card UI Variable")]
-    [SerializeField] private RectTransform m_CardRT;
-
-
+    [SerializeField] private Sprite m_CardImage;
     #endregion
 
     #region Getter & Setter
-    public int CardID
-    {
-        get
-        {
-            return m_CardID;
-        }
+    #endregion
+}
 
-        set
-        {
-            m_CardID = value;
-        }
+public class NormalCard : Card
+{
+    [SerializeField] private int m_CardNumber;
+
+    public NormalCard()
+    {
+
     }
 
-    #endregion
+}
+
+public enum E_CardEffect { Reverse, Draw, Skip }
+public class SpecialCard : Card
+{
+    [SerializeField] private E_CardEffect m_CardEffect;
+
+    public SpecialCard()
+    {
+
+    }
+
 }
