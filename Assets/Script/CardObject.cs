@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public enum E_ZoneType { Hand, Deck, Pile }
 public enum E_FaceType { Front, Back }
+public enum E_PostionType {Top, Bottom }
 public enum E_CardOption { Play, Draw }
 
-public class CardObject : MonoBehaviour {
+public class CardObject : MonoBehaviour, IPointerExitHandler
+{
 
     #region Variable
     [Header("Card Data")]
@@ -34,8 +37,152 @@ public class CardObject : MonoBehaviour {
     #endregion
 
     #region Getter & Setter
+    public int CardObjectId
+    {
+        get
+        {
+            return m_CardObjectId;
+        }
 
+        set
+        {
+            m_CardObjectId = value;
+        }
+    }
+    public Card CardData
+    {
+        get
+        {
+            return m_CardData;
+        }
+
+        set
+        {
+            m_CardData = value;
+        }
+    }
+    public E_ZoneType CardZone
+    {
+        get
+        {
+            return m_CardZone;
+        }
+
+        set
+        {
+            m_CardZone = value;
+        }
+    }
+    public Sprite FrontImage
+    {
+        get
+        {
+            return m_FrontImage;
+        }
+
+        set
+        {
+            m_FrontImage = value;
+        }
+    }
+    public Sprite BackImage
+    {
+        get
+        {
+            return m_BackImage;
+        }
+
+        set
+        {
+            m_BackImage = value;
+        }
+    }
+    public Sprite OverlayTransparent
+    {
+        get
+        {
+            return m_OverlayTransparent;
+        }
+
+        set
+        {
+            m_OverlayTransparent = value;
+        }
+    }
+    public Sprite OverlayHighlighted
+    {
+        get
+        {
+            return m_OverlayHighlighted;
+        }
+
+        set
+        {
+            m_OverlayHighlighted = value;
+        }
+    }
+    public Sprite OverlayAvailable
+    {
+        get
+        {
+            return m_OverlayAvailable;
+        }
+
+        set
+        {
+            m_OverlayAvailable = value;
+        }
+    }
+    public GameObject CardOptionButtonPrefab
+    {
+        get
+        {
+            return m_CardOptionButtonPrefab;
+        }
+
+        set
+        {
+            m_CardOptionButtonPrefab = value;
+        }
+    }
+    public HashSet<E_CardOption> CardOptionSet
+    {
+        get
+        {
+            return m_CardOptionSet;
+        }
+
+        set
+        {
+            m_CardOptionSet = value;
+        }
+    }
+    public GameObject CardOptionGroup
+    {
+        get
+        {
+            return m_CardOptionGroup;
+        }
+
+        set
+        {
+            m_CardOptionGroup = value;
+        }
+    }
+    public GameObject CardOverlay
+    {
+        get
+        {
+            return m_CardOverlay;
+        }
+
+        set
+        {
+            m_CardOverlay = value;
+        }
+    }
     #endregion
+
     public void MoveCard()
     {
 
@@ -49,17 +196,17 @@ public class CardObject : MonoBehaviour {
 
     private void Awake()
     {
-        m_CardOptionSet = new HashSet<E_CardOption>();
+        CardOptionSet = new HashSet<E_CardOption>();
         foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
 
             switch (child.name)
             {
                 case "Card Option Group":
-                    m_CardOptionGroup = child.gameObject;
+                    CardOptionGroup = child.gameObject;
                     break;
                 case "Card Overlay":
-                    m_CardOverlay = child.gameObject;
+                    CardOverlay = child.gameObject;
                     break;
             }
         }
@@ -75,34 +222,34 @@ public class CardObject : MonoBehaviour {
     {
         
         if (Mathf.Abs(GetComponent<RectTransform>().rotation.y) <= .70)
-            GetComponent<Image>().sprite = m_FrontImage;
+            GetComponent<Image>().sprite = FrontImage;
         else
-            GetComponent<Image>().sprite = m_BackImage;
+            GetComponent<Image>().sprite = BackImage;
     }
 
     //Update Option available to card
     private void UpdateCardOption()
     {
         //Clear Card Option
-        m_CardOptionSet.Clear();
+        CardOptionSet.Clear();
 
         //Add Card Option to HashSet depending on their location
-        switch (m_CardZone)
+        switch (CardZone)
         {
             case E_ZoneType.Deck:
-                m_CardOptionSet = new HashSet<E_CardOption>()
+                CardOptionSet = new HashSet<E_CardOption>()
                 {
                     E_CardOption.Play
                 };
                 break;
             case E_ZoneType.Hand:
-                m_CardOptionSet = new HashSet<E_CardOption>()
+                CardOptionSet = new HashSet<E_CardOption>()
                 {
                     E_CardOption.Play
                 };
                 break;
             case E_ZoneType.Pile:
-                m_CardOptionSet = new HashSet<E_CardOption>()
+                CardOptionSet = new HashSet<E_CardOption>()
                 {
                     E_CardOption.Play
                 };
@@ -120,18 +267,18 @@ public class CardObject : MonoBehaviour {
         GetComponent<Button>().enabled = false;
 
         //Adjust the RectTransform height of the card option group
-        float optionCount = m_CardOptionSet.Count;
-        float optionHeight = m_CardOptionButtonPrefab.GetComponent<RectTransform>().rect.height;
-        float optionSpacing = m_CardOptionGroup.GetComponent<VerticalLayoutGroup>().spacing;
-        m_CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, optionCount * (optionHeight + optionSpacing));
+        float optionCount = CardOptionSet.Count;
+        float optionHeight = CardOptionButtonPrefab.GetComponent<RectTransform>().rect.height;
+        float optionSpacing = CardOptionGroup.GetComponent<VerticalLayoutGroup>().spacing;
+        CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, optionCount * (optionHeight + optionSpacing));
 
         //Add Trigger Event for each option
-        foreach (E_CardOption cardOption in m_CardOptionSet)
+        foreach (E_CardOption cardOption in CardOptionSet)
         {
             //Create a button from prefab
-            GameObject newButtonObject = Instantiate(m_CardOptionButtonPrefab, transform.position, transform.rotation) as GameObject;
+            GameObject newButtonObject = Instantiate(CardOptionButtonPrefab, transform.position, transform.rotation) as GameObject;
             //Set the button parent
-            newButtonObject.transform.SetParent(m_CardOptionGroup.transform, false);
+            newButtonObject.transform.SetParent(CardOptionGroup.transform, false);
 
             //Set name of Button and text of button
             string cardOptionString = cardOption.ToString().Replace("_", " ");
@@ -159,41 +306,80 @@ public class CardObject : MonoBehaviour {
         GetComponent<Button>().enabled = true;
 
         //Clear all the option available to the card
-        m_CardOptionSet.Clear();
-        if (m_CardOptionGroup.transform.childCount != 0)
+        CardOptionSet.Clear();
+        if (CardOptionGroup.transform.childCount != 0)
         {
-            foreach (Transform child in m_CardOptionGroup.transform)
+            foreach (Transform child in CardOptionGroup.transform)
             {
                 Destroy(child.gameObject);
             }
         }
 
         //Set Height of CardOptionGroup back to 0
-        m_CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
+        CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
     }
-    
 
-    IEnumerator MoveCard_IE()
+
+    //Move card back to (0,0) and Rotate card depending on move type
+    IEnumerator MoveCard_IE(GameObject cardZone, E_FaceType moveFacing, E_PostionType movePosition)
     {
+        if (cardZone == null)
+        {
+            yield return new WaitUntil(() => GetComponentInParent<Board>().WaitingSelection == false);
+            cardZone = GetComponentInParent<Board>().ZoneSelection;
+        }
+
+        cardZone.GetComponent<IZone>().AddCard(this.gameObject);
+
         RectTransform cardRT = GetComponent<RectTransform>();
 
-        //Variable for Lerp
+        //Variable for position lerp
         Vector2 currentPostion = cardRT.anchoredPosition;
         Vector2 targetPostion = new Vector2(0, 0);
-        float t = 0;
+
+        //Variable for rotation lerp
+        Quaternion currentRotation = cardRT.rotation;
+
+        //Set rotation depending on move rotation
+        Quaternion targetRotation = cardRT.rotation;
+        switch (moveFacing)
+        {
+            case E_FaceType.Front:
+                targetRotation = Quaternion.Euler(0, 0, 0);
+                break;
+            case E_FaceType.Back:
+                targetRotation = Quaternion.Euler(0, 180, 0);
+                break;
+        }
 
         //Anchor the image so that it centered when moving back to origin
         cardRT.anchorMax = new Vector2(0.5f, 0.5f);
         cardRT.anchorMin = new Vector2(0.5f, 0.5f);
 
-        //Move the Card Back to origin over a period of 1s
+        //Time
+        float time = 0f;
+        float timeToFinish = 2f;
+
+        //Move the Card Back to origin over the time it takes to finish
         while (currentPostion != targetPostion)
         {
-            t += Time.deltaTime / 1f;
+            time += Time.deltaTime / timeToFinish;
+
             currentPostion = cardRT.anchoredPosition;
-            cardRT.anchoredPosition = Vector2.Lerp(currentPostion, targetPostion, t);
+            currentRotation = cardRT.rotation;
+
+            cardRT.anchoredPosition = Vector2.Lerp(currentPostion, targetPostion, time);
+            cardRT.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
+
             yield return null;
         }
+    }
+
+    //Called when mouse pointer leaves area
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        //When pointer leave pointer area, then close option
+        CloseOption();
     }
 
 }

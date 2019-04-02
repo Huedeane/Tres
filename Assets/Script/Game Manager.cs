@@ -10,6 +10,30 @@ public class GameManager : MonoBehaviour {
     #endregion
 
     #region Getter & Setter
+    public int GameDuration
+    {
+        get
+        {
+            return m_GameDuration;
+        }
+
+        set
+        {
+            m_GameDuration = value;
+        }
+    }
+    public List<Player> PlayerList
+    {
+        get
+        {
+            return m_PlayerList;
+        }
+
+        set
+        {
+            m_PlayerList = value;
+        }
+    }
     #endregion
 
     #region Private Method

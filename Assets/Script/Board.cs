@@ -16,6 +16,10 @@ public class Board : MonoBehaviour {
     #endregion
 
     #region Public Method
+    public void UpdateCardList()
+    {
+        
+    }
     public void DrawCard()
     {
 
@@ -26,7 +30,7 @@ public class Board : MonoBehaviour {
     }
     public void ShuffleDeck()
     {
-
+        //Shuffle Sibling Position
     }
     public void ShufflePile()
     {
