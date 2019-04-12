@@ -7,6 +7,7 @@ public class Board : MonoBehaviour {
     #region Variable
     //private List<Card> m_BoardDeck;
     //private List<Card> m_BoardPile;
+    public List<GameObject> handList;
     #endregion
 
     #region Getter & Setter
@@ -31,31 +32,11 @@ public class Board : MonoBehaviour {
     }
     public void DealCard()
     {
-
-    }
-    public void ShuffleDeck()
-    {
-        //Find Deck GameObject
-        //Loop through all child gameObject of the deck and add it to a list of gameobject
-        //Do a loop and randomize the sibling index of every gameobject
-
-        
-        //Shuffle Sibling Position
-        GameObject Deck = GameObject.Find("Deck");
-        List<GameObject> Decklist = new List<GameObject>();
-
-        
-        foreach (Transform Card in Deck.transform)
-        {
-            Decklist.Add(Card.gameObject);
+        foreach (GameObject zone in handList) {
+            GameObject cardObject = GameObject.Find("Card Content").transform.GetChild(GameObject.Find("Card Content").transform.childCount - 1).gameObject;
+            cardObject.GetComponent<CardObject>().Move(zone);
         }
-        
-
-        foreach (GameObject Card in Decklist)
-        {
-            Card.transform.SetSiblingIndex(Random.Range(0, Decklist.Count));
-        }
-        
     }
+
     #endregion
 }

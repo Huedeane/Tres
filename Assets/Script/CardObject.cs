@@ -235,101 +235,32 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
         }
     }
 
-    /*
-    //Display Card Options
-    private void ShowOption()
+    public void Move(GameObject gameObject)
     {
-        //Clear and update with option the card can do
-        UpdateCardOption();
-
-        //Prevent the Player from clicking the card again
-        GetComponent<Button>().enabled = false;
-
-        //Adjust the RectTransform height of the card option group
-        float optionCount = CardOptionSet.Count;
-        float optionHeight = CardOptionButtonPrefab.GetComponent<RectTransform>().rect.height;
-        float optionSpacing = CardOptionGroup.GetComponent<VerticalLayoutGroup>().spacing;
-        CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, optionCount * (optionHeight + optionSpacing));
-
-        //Add Trigger Event for each option
-        foreach (E_CardOption cardOption in CardOptionSet)
-        {
-            //Create a button from prefab
-            GameObject newButtonObject = Instantiate(CardOptionButtonPrefab, transform.position, transform.rotation) as GameObject;
-            //Set the button parent
-            newButtonObject.transform.SetParent(CardOptionGroup.transform, false);
-
-            //Set name of Button and text of button
-            string cardOptionString = cardOption.ToString().Replace("_", " ");
-            newButtonObject.GetComponentInChildren<TextMeshProUGUI>().SetText(cardOptionString);
-            newButtonObject.name = cardOptionString;
-
-            //Add Method to Button OnClick
-            Button button = newButtonObject.GetComponent<Button>();
-            button.onClick.AddListener(() => CloseOption());
-
-
-            switch (cardOption)
-            {
-                case E_CardOption.Play:
-                    //button.onClick.AddListener(()=> Move(cardOption));
-                    break; 
-            }
-        }
-
+        StartCoroutine(MoveCard_IE(gameObject));
     }
-    private void CloseOption()
-    {
-        
-        //Set the button to be able to click on again
-        GetComponent<Button>().enabled = true;
 
-        //Clear all the option available to the card
-        CardOptionSet.Clear();
-        if (CardOptionGroup.transform.childCount != 0)
-        {
-            foreach (Transform child in CardOptionGroup.transform)
-            {
-                Destroy(child.gameObject);
-            }
-        }
-
-        //Set Height of CardOptionGroup back to 0
-        CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
-    }
-    */
 
     //Move card back to (0,0) and Rotate card depending on move type
-    IEnumerator MoveCard_IE(GameObject cardZone, E_FaceType moveFacing, E_PostionType movePosition)
+    IEnumerator MoveCard_IE(GameObject cardZone)
     {
-        if (cardZone == null)
-        {
-           // yield return new WaitUntil(() => GetComponentInParent<Board>().WaitingSelection == false);
-            //cardZone = GetComponentInParent<Board>().ZoneSelection;
-        }
-
-        //cardZone.GetComponent<IZone>().AddCard(this.gameObject);
-
+        cardZone.GetComponent<Hand>().AddCard(this.gameObject);
         RectTransform cardRT = GetComponent<RectTransform>();
 
         //Variable for position lerp
         Vector2 currentPostion = cardRT.anchoredPosition;
         Vector2 targetPostion = new Vector2(0, 0);
 
+        //Variable for scale lerp
+        Vector3 currentScale = cardRT.localScale;
+        Vector3 targetScale = cardZone.GetComponent<RectTransform>().localScale;
+
         //Variable for rotation lerp
         Quaternion currentRotation = cardRT.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
 
-        //Set rotation depending on move rotation
-        Quaternion targetRotation = cardRT.rotation;
-        switch (moveFacing)
-        {
-            case E_FaceType.Front:
-                targetRotation = Quaternion.Euler(0, 0, 0);
-                break;
-            case E_FaceType.Back:
-                targetRotation = Quaternion.Euler(0, 180, 0);
-                break;
-        }
+        Debug.Log(currentRotation);
+        Debug.Log(targetRotation);
 
         //Anchor the image so that it centered when moving back to origin
         cardRT.anchorMax = new Vector2(0.5f, 0.5f);
@@ -346,12 +277,18 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
 
             currentPostion = cardRT.anchoredPosition;
             currentRotation = cardRT.rotation;
+            currentScale = cardRT.localScale;
+
+            
 
             cardRT.anchoredPosition = Vector2.Lerp(currentPostion, targetPostion, time);
+            cardRT.Rotate(new Vector3(0, 0, 30));
             cardRT.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
+            cardRT.localScale = Vector3.Lerp(currentScale, targetScale, time);
 
             yield return null;
         }
+
     }
 
     //Called when mouse pointer leaves area
