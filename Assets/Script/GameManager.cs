@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     #region Variable
     private int m_GameDuration;
     private List<Player> m_PlayerList;
+    private List<GameObject> m_HandZone;
     #endregion
 
     #region Getter & Setter

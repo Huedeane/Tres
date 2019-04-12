@@ -16,9 +16,9 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
     #region Variable
     [Header("Card Data")]
     [SerializeField] private int m_CardObjectId;
-    [SerializeField] private Card m_CardData;
-    [SerializeField] private E_ZoneType m_CardZone;
-
+    [SerializeField] private E_CardColor m_CardColor;
+    [SerializeField] private E_CardType m_CardType;
+    [SerializeField] private E_ZoneType m_CardLocation;
 
     [Header("Sprite")]
     [SerializeField] private Sprite m_FrontImage;
@@ -49,30 +49,8 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
             m_CardObjectId = value;
         }
     }
-    public Card CardData
-    {
-        get
-        {
-            return m_CardData;
-        }
+   
 
-        set
-        {
-            m_CardData = value;
-        }
-    }
-    public E_ZoneType CardZone
-    {
-        get
-        {
-            return m_CardZone;
-        }
-
-        set
-        {
-            m_CardZone = value;
-        }
-    }
     public Sprite FrontImage
     {
         get
@@ -234,7 +212,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
         CardOptionSet.Clear();
 
         //Add Card Option to HashSet depending on their location
-        switch (CardZone)
+        switch (m_CardLocation)
         {
             case E_ZoneType.Deck:
                 CardOptionSet = new HashSet<E_CardOption>()
@@ -257,6 +235,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
         }
     }
 
+    /*
     //Display Card Options
     private void ShowOption()
     {
@@ -293,7 +272,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
             switch (cardOption)
             {
                 case E_CardOption.Play:
-                    button.onClick.AddListener(()=> Move(cardOption));
+                    //button.onClick.AddListener(()=> Move(cardOption));
                     break; 
             }
         }
@@ -318,18 +297,18 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
         //Set Height of CardOptionGroup back to 0
         CardOptionGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
     }
-
+    */
 
     //Move card back to (0,0) and Rotate card depending on move type
     IEnumerator MoveCard_IE(GameObject cardZone, E_FaceType moveFacing, E_PostionType movePosition)
     {
         if (cardZone == null)
         {
-            yield return new WaitUntil(() => GetComponentInParent<Board>().WaitingSelection == false);
-            cardZone = GetComponentInParent<Board>().ZoneSelection;
+           // yield return new WaitUntil(() => GetComponentInParent<Board>().WaitingSelection == false);
+            //cardZone = GetComponentInParent<Board>().ZoneSelection;
         }
 
-        cardZone.GetComponent<IZone>().AddCard(this.gameObject);
+        //cardZone.GetComponent<IZone>().AddCard(this.gameObject);
 
         RectTransform cardRT = GetComponent<RectTransform>();
 
@@ -379,7 +358,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         //When pointer leave pointer area, then close option
-        CloseOption();
+        //CloseOption();
     }
 
 }
