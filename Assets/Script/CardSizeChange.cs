@@ -6,12 +6,7 @@ using UnityEngine.UI;
 public class CardSizeChange : MonoBehaviour {
 
     [SerializeField] private float CardWidth;
-    [SerializeField] private List<GameObject> CardList; 
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    [SerializeField] private List<GameObject> CardList;
 
     void ControlSizeWidth()
     {   

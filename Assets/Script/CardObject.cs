@@ -257,10 +257,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
 
         //Variable for rotation lerp
         Quaternion currentRotation = cardRT.rotation;
-        Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
-
-        Debug.Log(currentRotation);
-        Debug.Log(targetRotation);
+        Quaternion targetRotation = cardZone.GetComponent<RectTransform>().rotation;
 
         //Anchor the image so that it centered when moving back to origin
         cardRT.anchorMax = new Vector2(0.5f, 0.5f);
@@ -279,10 +276,7 @@ public class CardObject : MonoBehaviour, IPointerExitHandler
             currentRotation = cardRT.rotation;
             currentScale = cardRT.localScale;
 
-            
-
             cardRT.anchoredPosition = Vector2.Lerp(currentPostion, targetPostion, time);
-            cardRT.Rotate(new Vector3(0, 0, 30));
             cardRT.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
             cardRT.localScale = Vector3.Lerp(currentScale, targetScale, time);
 
