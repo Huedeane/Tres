@@ -188,7 +188,6 @@ GameObject:
   m_Component:
   - component: {fileID: 166580663}
   - component: {fileID: 166580664}
-  - component: {fileID: 166580665}
   - component: {fileID: 166580666}
   m_Layer: 5
   m_Name: Hand Right
@@ -239,20 +238,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &166580665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166580662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a61f782b611f464e962c87877ef2e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardWidth: 72
-  CardList: []
 --- !u!114 &166580666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,8 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e466a62a05e764c9ac190375f2213e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandCardList: []
   CardHolderPrefab: {fileID: 8005166479423671095, guid: b92717a267946554db147e00ef3cdbb0,
     type: 3}
+  CardWidth: 72
 --- !u!1 &248530893
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 248530894}
   - component: {fileID: 248530895}
-  - component: {fileID: 248530896}
   - component: {fileID: 248530898}
   m_Layer: 5
   m_Name: Hand Left
@@ -328,20 +314,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &248530896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248530893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a61f782b611f464e962c87877ef2e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardWidth: 72
-  CardList: []
 --- !u!114 &248530898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,8 +326,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e466a62a05e764c9ac190375f2213e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandCardList: []
   CardHolderPrefab: {fileID: 8005166479423671095, guid: b92717a267946554db147e00ef3cdbb0,
     type: 3}
+  CardWidth: 72
 --- !u!1 &368598083
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 368598084}
   - component: {fileID: 368598085}
-  - component: {fileID: 368598086}
   - component: {fileID: 368598087}
   m_Layer: 5
   m_Name: Hand Top
@@ -417,20 +390,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &368598086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368598083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a61f782b611f464e962c87877ef2e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardWidth: 72
-  CardList: []
 --- !u!114 &368598087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,8 +402,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e466a62a05e764c9ac190375f2213e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandCardList: []
   CardHolderPrefab: {fileID: 8005166479423671095, guid: b92717a267946554db147e00ef3cdbb0,
     type: 3}
+  CardWidth: 72
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +572,6 @@ GameObject:
   m_Component:
   - component: {fileID: 992127398}
   - component: {fileID: 992127399}
-  - component: {fileID: 992127400}
   - component: {fileID: 992127401}
   m_Layer: 5
   m_Name: Hand Bottom
@@ -662,20 +622,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &992127400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992127397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a61f782b611f464e962c87877ef2e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardWidth: 72
-  CardList: []
 --- !u!114 &992127401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,8 +634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e466a62a05e764c9ac190375f2213e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandCardList: []
   CardHolderPrefab: {fileID: 8005166479423671095, guid: b92717a267946554db147e00ef3cdbb0,
     type: 3}
+  CardWidth: 72
 --- !u!1 &1002678070
 GameObject:
   m_ObjectHideFlags: 0

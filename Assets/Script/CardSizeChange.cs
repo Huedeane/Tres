@@ -18,14 +18,22 @@ public class CardSizeChange : MonoBehaviour {
 
         if(totalSize > layoutWidth)
         {
-            this.GetComponent<HorizontalLayoutGroup>().childControlWidth = true;
+            GetComponent<HorizontalLayoutGroup>().childForceExpandWidth = true;
+            GetComponent<HorizontalLayoutGroup>().childControlWidth = true;
         }
         else
         {
-            this.GetComponent<HorizontalLayoutGroup>().childControlWidth = false;
-        }
+            GetComponent<HorizontalLayoutGroup>().childForceExpandWidth = false;
+            GetComponent<HorizontalLayoutGroup>().childControlWidth = false;
 
+            foreach (Transform child in transform)
+            {
+                child.GetComponent<RectTransform>().sizeDelta = new Vector2(CardWidth, 100);
+
+            }
+        }
     }
+
 	
 	// Update is called once per frame
 	void Update () {
