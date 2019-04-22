@@ -18,6 +18,8 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public bool myTurn;
 
+    public Text nameText;
+
     public override void OnStartServer()
     {
         NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
@@ -26,6 +28,7 @@ public class Player : NetworkBehaviour
         playerScore = 0;
         playerNum = n;
         playerName = "P" + n;
+        Debug.Log(playerName);
         if (n == 1)
             myTurn = true;
         else
@@ -38,6 +41,7 @@ public class Player : NetworkBehaviour
         
 
         NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
+        Debug.Log(netMan.numPlayers);
         netMan.GetComponent<NetworkManagerHUD>().showGUI = false;
 
         GameObject playerList = GameObject.Find("Player List");
@@ -45,6 +49,7 @@ public class Player : NetworkBehaviour
         transform.localPosition = Vector3.zero;
 
         int localPlayerNum = playerNum;
+        nameText.text = playerName;
 
         if (isLocalPlayer)
         {
@@ -52,36 +57,63 @@ public class Player : NetworkBehaviour
         }
         else
         {
+            transform.eulerAngles = new Vector3(0, 0, 180);
+        }
 
-            //Get other player number
-            if (netMan.numPlayers == 2){
-                int rightPlayerNum = Mathf.Abs((localPlayerNum + 1)) % 4;
-                Transform rightPlayerSlot = playerList.transform.GetChild(rightPlayerNum);
-                rightPlayerSlot.eulerAngles = new Vector3(0, 0, 90);
-            }
-            
-            /*
-            int topPlayerNum = (localPlayerNum + 2) % 4;
-            int leftPlayerNum = (localPlayerNum + 3) % 4;
+        /*
+        for (int x = 1; x <= playerList.transform.childCount - 1; x++)
+        {
 
-            //Get player slot from list using player number
-            
-            Transform topPlayerSlot = playerList.transform.GetChild(topPlayerNum);
-            Transform leftPlayerSlot = playerList.transform.GetChild(leftPlayerNum);
-
-            //Adjust rotation depending on local player location
-            
-            topPlayerSlot.eulerAngles = new Vector3(0, 0, 180);
-            leftPlayerSlot.eulerAngles = new Vector3(0, 0, -90);
-            */
+            int playerNum = GetPreviousPlayer(localPlayerNum, x, playerList.transform.childCount);
+            Debug.Log("playerNum: " + playerNum + " num: " + x);
+            Transform playerSlot = playerList.transform.GetChild(playerNum - 1);
+            transform.eulerAngles = new Vector3(0, 0, x * -90);
 
         }
+        */
 
     }
 
-    void Update()
+    /*
+    int GetPreviousPlayer(int num, int minus, int max)
     {
-        GameObject.Find("Player Name").GetComponentInChildren<Text>().text = playerName;
+        int x = (num - minus) % 4;
+        if (x == 0)
+            return max;
+        else
+            return x;
+    }
+    */
+
+    [Command]
+    public void CmdServerCommand(string cmd)
+    {
+        //If it's not your turn return void
+        if (myTurn == false)
+            return;
+
+        //Get the other player
+        Player otherPlayer = getNextPlayer();
+
+        //Set the turn to other player
+        myTurn = false;
+        otherPlayer.myTurn = true;
+
+        //send cmd to all clients
+        RpcClientCommand(cmd);
+    }
+
+    [ClientRpc]
+    public void RpcClientCommand(string cmd)
+    {
+        //Process Client Side
+        GetComponent<PlayerCommand>().processCmdString(cmd);
+    }
+
+    public Player getNextPlayer()
+    {
+        int nextIndex = (transform.GetSiblingIndex() + 1) % transform.parent.childCount;
+        return transform.parent.GetChild(nextIndex).GetComponent<Player>();
     }
 
 }

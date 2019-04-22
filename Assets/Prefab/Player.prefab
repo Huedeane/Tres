@@ -797,6 +797,7 @@ MonoBehaviour:
   playerNum: 0
   playerScore: 0
   myTurn: 0
+  nameText: {fileID: 7755604056723140580}
 --- !u!114 &875183343151291768
 MonoBehaviour:
   m_ObjectHideFlags: 0
