@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ZoneId: 0
   m_ZoneType: 1
-  m_ZoneAmountText: {fileID: 5817031791871508002}
+  m_ZoneAmountText: {fileID: 5696561563967663818}
   m_ZoneCardContent: {fileID: 1244146333337049581}
 --- !u!1 &5817031791871508002
 GameObject:
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469946941654002182}
   - component: {fileID: 7590481215656573909}
-  - component: {fileID: 4603128162346537996}
+  - component: {fileID: 5696561563967663818}
   m_Layer: 5
   m_Name: Card Amount Text
   m_TagString: Untagged
@@ -210,7 +210,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5817031791871508002}
   m_CullTransparentMesh: 0
---- !u!114 &4603128162346537996
+--- !u!114 &5696561563967663818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5817031791871508002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -230,101 +230,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 0
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 15
-  m_fontSizeBase: 15
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 514
-  m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 4603128162346537996}
-    characterCount: 1
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
-    linkCount: 0
-    lineCount: 1
-    pageCount: 1
-    materialCount: 1
-  m_havePropertiesChanged: 0
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
-  m_hasFontAssetChanged: 0
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
 --- !u!1 &6804677436950866163
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +429,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &453952692149005014 stripped
@@ -665,6 +594,16 @@ PrefabInstance:
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -824,6 +763,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &351228487291424906 stripped
@@ -979,6 +928,16 @@ PrefabInstance:
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1280,6 +1239,16 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &1964012646785811690 stripped
@@ -1436,6 +1405,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1594,6 +1573,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2141103218450767191 stripped
@@ -1737,6 +1726,11 @@ PrefabInstance:
       objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
         type: 3}
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 1
@@ -1893,6 +1887,11 @@ PrefabInstance:
       propertyPath: m_CardObjectId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504183450325880 stripped
@@ -2045,6 +2044,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300056, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504184229046025 stripped
@@ -2197,6 +2201,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300066, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504182754752890 stripped
@@ -2349,6 +2358,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300062, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504182776265938 stripped
@@ -2501,6 +2515,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300052, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504182379138617 stripped
@@ -2649,6 +2668,11 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 5
@@ -2805,6 +2829,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300060, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504183056075722 stripped
@@ -2957,6 +2986,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300064, guid: cc624574ecad6ce42855528bc4367c75,
         type: 3}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504183150968154 stripped
@@ -3113,6 +3147,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3271,6 +3315,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2817296585244301928 stripped
@@ -3424,6 +3478,16 @@ PrefabInstance:
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 8
@@ -3585,6 +3649,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4581013321653119737 stripped
@@ -3741,6 +3815,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3899,6 +3983,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4844922412310822839 stripped
@@ -4055,6 +4149,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4213,6 +4317,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4629266980429484014 stripped
@@ -4369,6 +4483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardObjectId
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4527,6 +4646,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &5592437853954136885 stripped
@@ -4682,6 +4811,16 @@ PrefabInstance:
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4841,6 +4980,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &6201341263916629379 stripped
@@ -4994,6 +5143,16 @@ PrefabInstance:
       value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 8
@@ -5155,6 +5314,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7091719702346070594 stripped
@@ -5311,6 +5480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardObjectId
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5469,6 +5643,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7487490868703641816 stripped
@@ -5625,6 +5809,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5783,6 +5977,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7337912748921143528 stripped
@@ -5939,6 +6143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardObjectId
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -6097,6 +6306,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &8170434826346339947 stripped
@@ -6253,6 +6472,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -6411,6 +6640,16 @@ PrefabInstance:
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &9126967345112632649 stripped
@@ -6567,6 +6806,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CardColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardType
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}

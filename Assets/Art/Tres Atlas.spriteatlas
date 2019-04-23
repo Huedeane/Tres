@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tres Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+    totalSpriteSurfaceArea: 2714647
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300050, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300078, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300028, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300026, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300104, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300002, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300022, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300076, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300042, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300034, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300064, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300018, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300090, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300030, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300082, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300040, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300062, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300122, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300004, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300096, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300056, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300014, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300072, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300054, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300108, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300124, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300092, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300070, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300060, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300036, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300084, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300116, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300016, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300044, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300020, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300052, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300024, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300074, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300088, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300086, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300102, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300114, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300126, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300118, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300032, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300106, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300100, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300066, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300080, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300038, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300058, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300068, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300046, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300110, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300120, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300000, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300098, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300006, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300010, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300112, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300048, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300094, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300008, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300012, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Red One
+  - Blue Two
+  - Yellow Three
+  - Yellow Two
+  - Green Two
+  - Black Change Color
+  - Black Change Color All
+  - Blue One
+  - Yellow Zero
+  - Yellow Six
+  - Red Eight
+  - Blue Draw Four
+  - Blue Eight
+  - Yellow Four
+  - Blue Four
+  - Yellow Nine
+  - Red Seven
+  - Green Draw Two
+  - Yellow Change Color
+  - Blue Draw Two
+  - Red Four
+  - Yellow Draw Four
+  - Red Skip
+  - Red Three
+  - Green Four
+  - Green Skip
+  - Blue Nine
+  - Red Draw Two
+  - Red Six
+  - Yellow Seven
+  - Blue Five
+  - Green Eight
+  - Red Draw Four
+  - Yellow Draw Two
+  - Green Draw Four
+  - Red Two
+  - Yellow One
+  - Red Reverse
+  - Blue Seven
+  - Blue Six
+  - Green One
+  - Green Seven
+  - Green Reverse
+  - Green Nine
+  - Yellow Five
+  - Green Three
+  - Blue Reverse
+  - Red Nine
+  - Blue Three
+  - Yellow Eight
+  - Red Five
+  - Red Zero
+  - Yellow Skip
+  - Green Five
+  - Green Zero
+  - Back Cover
+  - Blue Skip
+  - Red Change Color
+  - Green Change Color
+  - Green Six
+  - Yellow Reverse
+  - Blue Zero
+  - Blue Change Color
+  - Black Draw Four
+  m_Tag: Tres Atlas
+  m_IsVariant: 0

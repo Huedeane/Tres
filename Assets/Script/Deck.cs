@@ -1,33 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
     #region Variable
-    [SerializeField] private int m_ZoneId;
     [SerializeField] private E_ZoneType m_ZoneType;
     private List<GameObject> m_ZoneCardList;
 
-    [Header("Zone Child Object")]
-    [SerializeField] private GameObject m_ZoneAmountText;
+    [Header("Object Reference")]
+    [SerializeField] private Text m_ZoneAmountText;
     [SerializeField] private GameObject m_ZoneCardContent;
     #endregion
 
     #region Getter & Setter
-    public int ZoneId
-    {
-        get
-        {
-            return m_ZoneId;
-        }
-
-        set
-        {
-            m_ZoneId = value;
-        }
-    }
     public E_ZoneType ZoneType
     {
         get
@@ -52,7 +39,7 @@ public class Deck : MonoBehaviour
             m_ZoneCardList = value;
         }
     }
-    public GameObject ZoneAmountText
+    public Text ZoneAmountText
     {
         get
         {
@@ -81,6 +68,7 @@ public class Deck : MonoBehaviour
     private void Awake()
     {
         m_ZoneCardList = new List<GameObject>();
+        
         foreach (Transform card in ZoneCardContent.transform)
         {
             m_ZoneCardList.Add(card.gameObject);
@@ -88,7 +76,11 @@ public class Deck : MonoBehaviour
 
         ShuffleDeck();
 
-        m_ZoneAmountText.GetComponent<TextMeshProUGUI>().SetText(m_ZoneCardList.Count.ToString());
+    }
+
+    private void Update()
+    {
+        m_ZoneAmountText.GetComponent<Text>().text = m_ZoneCardList.Count.ToString();
     }
 
     public void ShuffleDeck()
@@ -100,7 +92,6 @@ public class Deck : MonoBehaviour
         }
 
         m_ZoneCardList.Clear();
-
 
         foreach (Transform card in ZoneCardContent.transform)
         {

@@ -18,7 +18,12 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public bool myTurn;
 
+
+    public GameObject playerHand;
+
     public Text nameText;
+    public Text messageText;
+    public IEnumerator currentMessage;
 
     public override void OnStartServer()
     {
@@ -86,7 +91,7 @@ public class Player : NetworkBehaviour
     */
 
     [Command]
-    public void CmdServerCommand(string cmd)
+    public void CmdServerCommand(Command cmd)
     {
         //If it's not your turn return void
         if (myTurn == false)
@@ -104,16 +109,53 @@ public class Player : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void RpcClientCommand(string cmd)
+    public void RpcClientCommand(Command cmd)
     {
         //Process Client Side
-        GetComponent<PlayerCommand>().processCmdString(cmd);
+        GetComponent<PlayerCommand>().processCmd(cmd);
     }
 
     public Player getNextPlayer()
     {
         int nextIndex = (transform.GetSiblingIndex() + 1) % transform.parent.childCount;
         return transform.parent.GetChild(nextIndex).GetComponent<Player>();
+    }
+
+    public void sendMessage(string message)
+    {
+        StopCoroutine(currentMessage);
+        currentMessage = sendMessage_IE(message);
+        StartCoroutine(currentMessage);
+    }
+
+    public IEnumerator sendMessage_IE(string message)
+    {
+        messageText.text = message;
+        Color c = messageText.color;
+        c.a = 1;
+        messageText.color = c;
+
+        //Time
+        float time = 0f;
+        float timeToFinish = 2f;
+
+        //Alpha
+        float currentAlpha = messageText.color.a;
+        float targetAlpha = 0f;
+
+        while (currentAlpha != targetAlpha)
+        {
+            time += Time.deltaTime / timeToFinish;
+
+            currentAlpha = messageText.color.a;
+
+            Color alphaColor = messageText.color;
+            alphaColor.a = Mathf.Lerp(currentAlpha, targetAlpha, time);
+            messageText.color = alphaColor;
+
+            yield return null;
+        }
+
     }
 
 }

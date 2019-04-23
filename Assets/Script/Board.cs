@@ -26,6 +26,7 @@ public class Board : MonoBehaviour {
     {
         
     }
+
     public void DrawCard()
     {
 
@@ -34,7 +35,7 @@ public class Board : MonoBehaviour {
     {
         foreach (GameObject zone in handList) {
             GameObject cardObject = GameObject.Find("Card Content").transform.GetChild(GameObject.Find("Card Content").transform.childCount - 1).gameObject;
-            cardObject.GetComponent<CardObject>().Move(zone);
+            cardObject.GetComponent<Card>().MoveCard(zone);
         }
     }
 

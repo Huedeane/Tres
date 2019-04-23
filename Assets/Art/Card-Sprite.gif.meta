@@ -3,17 +3,17 @@ guid: cc624574ecad6ce42855528bc4367c75
 TextureImporter:
   fileIDToRecycleName:
     21300000: Back Cover
-    21300002: Generic Change Color
+    21300002: Black Change Color
     21300004: Yellow Change Color
     21300006: Red Change Color
     21300008: Blue Change Color
     21300010: Green Change Color
-    21300012: Generic Draw Four
+    21300012: Black Draw Four
     21300014: Yellow Draw Four
     21300016: Red Draw Four
     21300018: Blue Draw Four
     21300020: Green Draw Four
-    21300022: Generic Change Color All
+    21300022: Black Change Color All
     21300024: Yellow One
     21300026: Yellow Two
     21300028: Yellow Three
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Generic Change Color
+      name: Black Change Color
       rect:
         serializedVersion: 2
         x: 167
@@ -268,7 +268,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Generic Draw Four
+      name: Black Draw Four
       rect:
         serializedVersion: 2
         x: 1005
@@ -368,7 +368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Generic Change Color All
+      name: Black Change Color All
       rect:
         serializedVersion: 2
         x: 1845
