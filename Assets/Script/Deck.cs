@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class Deck : MonoBehaviour
+#pragma warning disable 0618
+
+public class Deck : NetworkBehaviour
 {
     #region Variable
     [SerializeField] private E_ZoneType m_ZoneType;
@@ -74,30 +77,42 @@ public class Deck : MonoBehaviour
             m_ZoneCardList.Add(card.gameObject);
         }
 
-        ShuffleDeck();
-
     }
 
     private void Update()
     {
-        m_ZoneAmountText.GetComponent<Text>().text = m_ZoneCardList.Count.ToString();
+        m_ZoneAmountText.GetComponent<Text>().text = ZoneCardContent.transform.childCount.ToString();
     }
 
-    public void ShuffleDeck()
+    public Card GetTopCard()
     {
+        return ZoneCardContent.transform.GetChild(ZoneCardContent.transform.childCount - 1).GetComponent<Card>();
+    }
 
-        foreach (Transform card in ZoneCardContent.transform)
+    public void SetSeed(int seed)
+    {
+        if(isServer)
+            Random.InitState(seed);
+    }
+
+    public void ShuffleDeck(int seed)
+    {
+        Random.InitState(seed);
+
+        if (isServer)
         {
-            card.transform.SetSiblingIndex(Random.Range(0, m_ZoneCardList.Count));
+            foreach (Transform card in ZoneCardContent.transform)
+            {
+                card.transform.SetSiblingIndex(Random.Range(0, m_ZoneCardList.Count));
+            }
+
+            m_ZoneCardList.Clear();
+
+            foreach (Transform card in ZoneCardContent.transform)
+            {
+                m_ZoneCardList.Add(card.gameObject);
+            }
         }
-
-        m_ZoneCardList.Clear();
-
-        foreach (Transform card in ZoneCardContent.transform)
-        {
-            m_ZoneCardList.Add(card.gameObject);
-        }
-
     }
 
 

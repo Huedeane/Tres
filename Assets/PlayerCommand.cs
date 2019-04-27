@@ -14,24 +14,41 @@ public class PlayerCommand : MonoBehaviour
         myPlayer = GetComponent<Player>();
     }
 
-    public void processCmd(Command cmd)
+    public void processCmd(string cmd)
     {
         Player otherPlayer = myPlayer.getNextPlayer();
 
-        switch (cmd.CmdType)
+        string[] parts = cmd.Split(':');
+        string cmdName = parts[0];
+
+        Debug.Log(cmdName);
+
+        switch (cmdName)
         {
-            case E_CommandType.Draw:
-                Card card = cmd.CmdParam.TypeGameObject[0].GetComponent<Card>();
+            case "Draw Card":
+                Deck deck = GameObject.FindGameObjectWithTag("Deck").GetComponent<Deck>();
+                Card card = deck.GetTopCard();
+                card.CardLocation = E_ZoneType.Hand;
+                card.MoveCard(GetComponentInChildren<Hand>().gameObject);
 
                 if (myPlayer.isLocalPlayer)
                 {
                     card.Reveal();
-                    //card.MoveCard();
+                    
                 }
                 else
                 {
                     card.Hide();
                 }
+                break;
+            case "Set Seed":
+                int seed = int.Parse(parts[1]);
+                Random.InitState(seed);
+                Debug.Log("Set Seed " + seed);
+                break;
+            case "Shuffle Deck":
+                Debug.Log("Shuffle Deck");
+                
                 break;
         }
 
@@ -67,16 +84,7 @@ public class PlayerCommand : MonoBehaviour
     {
         if (myPlayer.myTurn == true)
         {
-            Command cmd = new Command(E_CommandType.Draw);
-            cmd.CmdParam = new Param();
-
-            GameObject deck = GameObject.Find("Deck of Card");
-            GameObject topCard = deck.transform.GetChild(deck.transform.childCount - 1).gameObject;
-
-            cmd.CmdParam.TypeGameObject = new List<GameObject>();
-            cmd.CmdParam.TypeGameObject.Add(topCard);
-
-            myPlayer.CmdServerCommand(cmd);
+            myPlayer.CmdServerCommandTurn("Draw Card");
         }
         else
         {

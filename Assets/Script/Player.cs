@@ -19,7 +19,7 @@ public class Player : NetworkBehaviour
     public bool myTurn;
 
 
-    public GameObject playerHand;
+    public Hand playerHand;
 
     public Text nameText;
     public Text messageText;
@@ -33,12 +33,20 @@ public class Player : NetworkBehaviour
         playerScore = 0;
         playerNum = n;
         playerName = "P" + n;
-        Debug.Log(playerName);
+
         if (n == 1)
             myTurn = true;
         else
             myTurn = false;
 
+        Debug.Log(n);
+
+        if (n == 2)
+        {
+            GameObject.Find("Game Manager").GetComponent<GameManager>().StartGame();
+        }
+
+        
     }
 
     void Start () {
@@ -46,7 +54,7 @@ public class Player : NetworkBehaviour
         
 
         NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
-        Debug.Log(netMan.numPlayers);
+        
         netMan.GetComponent<NetworkManagerHUD>().showGUI = false;
 
         GameObject playerList = GameObject.Find("Player List");
@@ -64,6 +72,7 @@ public class Player : NetworkBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
         }
+        
 
         /*
         for (int x = 1; x <= playerList.transform.childCount - 1; x++)
@@ -91,7 +100,14 @@ public class Player : NetworkBehaviour
     */
 
     [Command]
-    public void CmdServerCommand(Command cmd)
+    public void CmdServerCommand(string cmd)
+    {
+        //send cmd to all clients
+        RpcClientCommand(cmd);
+    }
+
+    [Command]
+    public void CmdServerCommandTurn(string cmd)
     {
         //If it's not your turn return void
         if (myTurn == false)
@@ -109,7 +125,7 @@ public class Player : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void RpcClientCommand(Command cmd)
+    public void RpcClientCommand(string cmd)
     {
         //Process Client Side
         GetComponent<PlayerCommand>().processCmd(cmd);
@@ -123,7 +139,10 @@ public class Player : NetworkBehaviour
 
     public void sendMessage(string message)
     {
-        StopCoroutine(currentMessage);
+        
+        if(currentMessage != null)
+            StopCoroutine(currentMessage);
+
         currentMessage = sendMessage_IE(message);
         StartCoroutine(currentMessage);
     }

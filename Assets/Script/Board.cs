@@ -5,12 +5,35 @@ using UnityEngine;
 public class Board : MonoBehaviour {
 
     #region Variable
-    //private List<Card> m_BoardDeck;
-    //private List<Card> m_BoardPile;
-    public List<GameObject> handList;
+    [SerializeField] private Deck m_BoardDeck;
+    [SerializeField] private Pile m_BoardPile;
     #endregion
 
     #region Getter & Setter
+    public Deck BoardDeck
+    {
+        get
+        {
+            return m_BoardDeck;
+        }
+
+        set
+        {
+            m_BoardDeck = value;
+        }
+    }
+    public Pile BoardPile
+    {
+        get
+        {
+            return m_BoardPile;
+        }
+
+        set
+        {
+            m_BoardPile = value;
+        }
+    }
     #endregion
 
     #region Private Method
@@ -33,10 +56,12 @@ public class Board : MonoBehaviour {
     }
     public void DealCard()
     {
+        /*
         foreach (GameObject zone in handList) {
             GameObject cardObject = GameObject.Find("Card Content").transform.GetChild(GameObject.Find("Card Content").transform.childCount - 1).gameObject;
             cardObject.GetComponent<Card>().MoveCard(zone);
         }
+        */
     }
 
     #endregion

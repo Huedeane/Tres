@@ -121,9 +121,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2242400018846720231}
   - component: {fileID: 4580281955576697280}
+  - component: {fileID: 8836331483850890865}
   m_Layer: 5
   m_Name: Deck of Card
-  m_TagString: Untagged
+  m_TagString: Deck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,10 +162,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b2a275d2e427644bf2438baca4db7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ZoneId: 0
   m_ZoneType: 1
   m_ZoneAmountText: {fileID: 5696561563967663818}
   m_ZoneCardContent: {fileID: 1244146333337049581}
+--- !u!114 &8836331483850890865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2242400018846720230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &5817031791871508002
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +366,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -381,54 +429,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300104, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -439,11 +439,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 384381231335025690}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &453952692149005014 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 383214584288604662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &384381231335025690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 383214584288604662}
   m_PrefabAsset: {fileID: 0}
@@ -500,6 +511,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -548,54 +574,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300076, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -606,8 +584,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 463632586446944313}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &463632586446944313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 462688178147386837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &393638638290058997 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -667,6 +656,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -715,54 +719,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300028, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -773,8 +729,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 560288391251514950}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &560288391251514950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 559115136390532010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &351228487291424906 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -834,6 +801,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -882,54 +864,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300026, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -940,11 +874,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 1148325145532614429}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &934198417122148817 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147081659373755121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1148325145532614429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1147081659373755121}
   m_PrefabAsset: {fileID: 0}
@@ -1001,6 +946,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1049,44 +1009,22 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
+      propertyPath: m_CardOverlay
       value: 
-      objectReference: {fileID: 21300068, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
+      objectReference: {fileID: 1684678611574953420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &1475057956693021440 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685970611544246304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1684678611574953420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1685970611544246304}
   m_PrefabAsset: {fileID: 0}
@@ -1143,6 +1081,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1191,54 +1144,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300038, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -1249,11 +1154,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 1754372200696742438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &1964012646785811690 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1755316624020332490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1754372200696742438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1755316624020332490}
   m_PrefabAsset: {fileID: 0}
@@ -1310,6 +1226,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1358,54 +1289,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300082, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -1416,8 +1299,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2015515905566788480}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2015515905566788480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2016598996205508204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1792949600771362124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -1477,6 +1371,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1525,54 +1434,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300078, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -1583,11 +1444,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2211233506047466395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2141103218450767191 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2209871293529900663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2211233506047466395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2209871293529900663}
   m_PrefabAsset: {fileID: 0}
@@ -1644,6 +1516,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1692,54 +1579,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300050, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardType
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229093097578860}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504183749584800 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400017963973760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2241229093097578860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400017963973760}
   m_PrefabAsset: {fileID: 0}
@@ -1796,6 +1656,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1844,56 +1719,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300054, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229092796028340}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2241229092796028340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400018200299608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504183450325880 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -1953,6 +1796,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2001,59 +1859,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300056, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229093574943173}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504184229046025 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400018978208809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2241229093574943173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400018978208809}
   m_PrefabAsset: {fileID: 0}
@@ -2110,6 +1936,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2158,56 +1999,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300066, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229092100652982}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2241229092100652982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400019114517082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182754752890 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2267,6 +2076,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2315,56 +2139,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300062, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229092124260894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2241229092124260894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400019139143666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182776265938 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2424,6 +2216,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2472,59 +2279,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300052, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229091716712693}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504182379138617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400019275814169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2241229091716712693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400019275814169}
   m_PrefabAsset: {fileID: 0}
@@ -2581,6 +2356,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2629,56 +2419,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300058, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardType
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229091820816477}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2241229091820816477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400019372578225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182475181713 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2738,6 +2496,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2786,59 +2559,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300060, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229092401712390}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &2018504183056075722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400019953504490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2241229092401712390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400019953504490}
   m_PrefabAsset: {fileID: 0}
@@ -2895,6 +2636,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2943,56 +2699,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300064, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2241229092488280982}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2241229092488280982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2242400020047373946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504183150968154 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3052,6 +2776,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3100,54 +2839,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300040, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3158,8 +2849,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2481528085014436393}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2481528085014436393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2482824483559737285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2407582492067519717 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3219,6 +2921,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3267,54 +2984,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300102, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3325,8 +2994,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 2594169529520807076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &2594169529520807076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2595406417040146760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2817296585244301928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3386,6 +3066,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3434,54 +3129,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300090, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3492,11 +3139,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4239901452795688801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4165403905022112173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4238957055274445453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4239901452795688801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4238957055274445453}
   m_PrefabAsset: {fileID: 0}
@@ -3553,6 +3211,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3601,54 +3274,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 39
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300118, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3659,11 +3284,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4362400860670913589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4581013321653119737 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4363626761664967129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4362400860670913589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4363626761664967129}
   m_PrefabAsset: {fileID: 0}
@@ -3720,6 +3356,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3768,54 +3419,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300024, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3826,11 +3429,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4594097895322381406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4384492358727494290 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4595194040521535922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4594097895322381406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4595194040521535922}
   m_PrefabAsset: {fileID: 0}
@@ -3887,6 +3501,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3935,54 +3564,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300030, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -3993,8 +3574,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4622316525105183099}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &4622316525105183099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4621026852470236311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4844922412310822839 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4054,6 +3646,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4102,54 +3709,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300084, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -4160,8 +3719,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4718036159551282533}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &4718036159551282533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4718998285095321737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4782980875435514793 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4221,6 +3791,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4269,54 +3854,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300092, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -4327,11 +3864,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 4838887910187157794}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &4629266980429484014 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4837928099639923918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4838887910187157794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4837928099639923918}
   m_PrefabAsset: {fileID: 0}
@@ -4388,6 +3936,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4436,61 +3999,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300120, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 5151928098175713104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &5151928098175713104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5150913308287935164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4928636115714275740 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4550,6 +4076,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4598,54 +4139,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300036, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -4656,8 +4149,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 5657945794661113337}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &5657945794661113337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5657054029784055829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5592437853954136885 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4717,6 +4221,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4765,54 +4284,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300106, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -4823,8 +4294,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 5775825853226733169}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &5775825853226733169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5774511996176208797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5998372641688930493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4884,6 +4366,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4932,54 +4429,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300108, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -4990,8 +4439,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 6131312406274145103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &6131312406274145103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6130005156485539491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6201341263916629379 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5051,6 +4511,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5099,54 +4574,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300116, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -5157,8 +4584,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 6772277679580658524}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &6772277679580658524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6773165044776462000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6837217997416086928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5218,6 +4656,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5266,54 +4719,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300088, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -5324,11 +4729,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7022099588142824590}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7091719702346070594 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7023197924312162658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7022099588142824590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7023197924312162658}
   m_PrefabAsset: {fileID: 0}
@@ -5385,6 +4801,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5433,61 +4864,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300042, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7074080812542136251}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &7074080812542136251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7073118817961071191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7004632497030531447 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5547,6 +4941,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5595,54 +5004,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300114, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -5653,8 +5014,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7273791025684760084}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &7273791025684760084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7274819134298594296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7487490868703641816 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5714,6 +5086,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5762,54 +5149,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300086, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -5820,8 +5159,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7383742775928623301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &7383742775928623301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7384981984342002985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7305130855641880073 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5881,6 +5231,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5929,54 +5294,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300110, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -5987,11 +5304,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7407537261162776100}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7337912748921143528 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7406223427735624648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7407537261162776100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7406223427735624648}
   m_PrefabAsset: {fileID: 0}
@@ -6048,6 +5376,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6096,64 +5439,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300094, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 7998463589672192795}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &7789287137481592279 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7999707206826514167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7998463589672192795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7999707206826514167}
   m_PrefabAsset: {fileID: 0}
@@ -6210,6 +5516,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6258,54 +5579,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300080, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -6316,11 +5589,22 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 8249024481520523431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
 --- !u!224 &8170434826346339947 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8250180123291043147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8249024481520523431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 8250180123291043147}
   m_PrefabAsset: {fileID: 0}
@@ -6377,6 +5661,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6425,54 +5724,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300032, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -6483,8 +5734,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 8347399152029224761}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &8347399152029224761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8346014941233353429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8128628361381267957 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -6544,6 +5806,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6592,54 +5869,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300112, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -6650,8 +5879,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 9056979994035997573}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &9056979994035997573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9057917811700897385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9126967345112632649 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -6711,6 +5951,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6759,54 +6014,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardLocation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_OverlayAvailable
-      value: 
-      objectReference: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardOptionButtonPrefab
-      value: 
-      objectReference: {fileID: 1955227594208702, guid: af03db6ab33b8e24e8284c30bee27076,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardObjectId
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardType
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_FrontImage
-      value: 
-      objectReference: {fileID: 21300034, guid: cc624574ecad6ce42855528bc4367c75,
-        type: 3}
-    - target: {fileID: 114657406797690018, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
-      propertyPath: m_CardColor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_CardColor
@@ -6817,8 +6024,19 @@ PrefabInstance:
       propertyPath: m_CardType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
+      propertyPath: m_CardOverlay
+      value: 
+      objectReference: {fileID: 9207075985855585375}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+--- !u!1 &9207075985855585375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9206186395867791795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8997983096546597523 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,

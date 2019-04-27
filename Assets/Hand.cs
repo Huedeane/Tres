@@ -7,9 +7,64 @@ public class Hand : MonoBehaviour
 {
 
     [Header("Card Holder Prefab")]
-    [SerializeField] private List<GameObject> HandCardList;
-    [SerializeField] private GameObject CardHolderPrefab;
-    [SerializeField] private float CardWidth;
+    [SerializeField] private List<GameObject> m_HandCardList;
+    [SerializeField] private GameObject m_CardHolderPrefab;
+    [SerializeField] private float m_CardWidth;
+    [SerializeField] private Card m_SelectedCard;
+
+    #region Getter & Setter
+    public List<GameObject> HandCardList
+    {
+        get
+        {
+            return m_HandCardList;
+        }
+
+        set
+        {
+            m_HandCardList = value;
+        }
+    }
+
+    public GameObject CardHolderPrefab
+    {
+        get
+        {
+            return m_CardHolderPrefab;
+        }
+
+        set
+        {
+            m_CardHolderPrefab = value;
+        }
+    }
+
+    public float CardWidth
+    {
+        get
+        {
+            return m_CardWidth;
+        }
+
+        set
+        {
+            m_CardWidth = value;
+        }
+    }
+
+    public Card SelectedCard
+    {
+        get
+        {
+            return m_SelectedCard;
+        }
+
+        set
+        {
+            m_SelectedCard = value;
+        }
+    }
+    #endregion
 
     private void ControlSizeWidth()
     {

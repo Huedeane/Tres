@@ -18,7 +18,7 @@ public enum E_ZoneType { Hand, Deck, Pile }
 public enum E_FaceType { Front, Back }
 public enum E_PostionType { Top, Bottom }
 
-public class Card : MonoBehaviour, IPointerExitHandler
+public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
 
     #region Variable
@@ -36,9 +36,11 @@ public class Card : MonoBehaviour, IPointerExitHandler
     [SerializeField] private Sprite m_OverlayHighlighted;
     [SerializeField] private Sprite m_OverlayAvailable;
     
-    
     [Header("Child Object")]
     [SerializeField] private GameObject m_CardOverlay;
+
+    [Header("Card Variable")]
+    [SerializeField] private bool m_IsSelected;
     #endregion
 
     #region Getter & Setter
@@ -174,6 +176,19 @@ public class Card : MonoBehaviour, IPointerExitHandler
             m_CardOverlay = value;
         }
     }
+
+    public bool IsSelected
+    {
+        get
+        {
+            return m_IsSelected;
+        }
+
+        set
+        {
+            m_IsSelected = value;
+        }
+    }
     #endregion
 
     public void Awake()
@@ -184,6 +199,7 @@ public class Card : MonoBehaviour, IPointerExitHandler
         m_FrontImage = m_ImageAtlas.GetSprite(cardColor + " " + cardType);
         m_BackImage = m_ImageAtlas.GetSprite("Back Cover");
 
+        IsSelected = false;
         Reveal();
     }
 
@@ -206,6 +222,20 @@ public class Card : MonoBehaviour, IPointerExitHandler
     public void Reveal()
     {
         GetComponent<Image>().sprite = m_FrontImage;
+    }
+
+    public void ToggleSelected()
+    {
+        if (IsSelected)
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayTransparent;
+            IsSelected = false;
+        }
+        else
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayHighlighted;
+            IsSelected = true;
+        }
     }
 
     public void Hide()
@@ -257,13 +287,35 @@ public class Card : MonoBehaviour, IPointerExitHandler
 
     }
 
+
     //Called when mouse pointer leaves area
     public void OnPointerExit(PointerEventData eventData)
     {
-        //When pointer leave pointer area, then close option
-        //CloseOption();
+        if (CardLocation == E_ZoneType.Hand)
+        {
+            GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);        
+        }
+        
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (CardLocation == E_ZoneType.Hand)
+        {
+            GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 25, 0);
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Card selectedCard = GetComponentInParent<Player>().playerHand.SelectedCard;
+
+        if (selectedCard != null)
+            selectedCard.ToggleSelected();
+
+        GetComponentInParent<Player>().playerHand.SelectedCard = this;
+        ToggleSelected();
+    }
 }
 
 
