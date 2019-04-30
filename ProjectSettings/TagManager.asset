@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Deck
+  - Pile
   layers:
   - Default
   - TransparentFX

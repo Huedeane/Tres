@@ -40,7 +40,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] private GameObject m_CardOverlay;
 
     [Header("Card Variable")]
+    [SerializeField] private bool m_IsAvailable;
     [SerializeField] private bool m_IsSelected;
+    [SerializeField] private bool m_IsInteractable;
     #endregion
 
     #region Getter & Setter
@@ -176,7 +178,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             m_CardOverlay = value;
         }
     }
-
     public bool IsSelected
     {
         get
@@ -189,6 +190,32 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             m_IsSelected = value;
         }
     }
+    public bool IsInteractable
+    {
+        get
+        {
+            return m_IsInteractable;
+        }
+
+        set
+        {
+            m_IsInteractable = value;
+        }
+    }
+    public bool IsAvailable
+    {
+        get
+        {
+            return m_IsAvailable;
+        }
+
+        set
+        {
+            m_IsAvailable = value;
+        }
+    }
+
+
     #endregion
 
     public void Awake()
@@ -200,23 +227,16 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         m_BackImage = m_ImageAtlas.GetSprite("Back Cover");
 
         IsSelected = false;
+        IsAvailable = false;
         Reveal();
     }
 
-    public void Update()
+    public void UpdateImage()
     {
-        
-    }
+        string cardColor = m_CardColor.ToString();
+        string cardType = m_CardType.ToString().Replace("_", " ");
 
-    public void MoveCard(GameObject location)
-    {
-        StartCoroutine(MoveCard_IE(location));
-    }
-
-    public void PlayCard()
-    {
-
-
+        m_FrontImage = m_ImageAtlas.GetSprite(cardColor + " " + cardType);
     }
 
     public void Reveal()
@@ -224,29 +244,54 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         GetComponent<Image>().sprite = m_FrontImage;
     }
 
-    public void ToggleSelected()
-    {
-        if (IsSelected)
-        {
-            CardOverlay.GetComponent<Image>().sprite = m_OverlayTransparent;
-            IsSelected = false;
-        }
-        else
-        {
-            CardOverlay.GetComponent<Image>().sprite = m_OverlayHighlighted;
-            IsSelected = true;
-        }
-    }
-
     public void Hide()
     {
         GetComponent<Image>().sprite = m_BackImage;
     }
 
+    public void ToggleAvailable(bool toggle)
+    {
+        if (toggle)
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayAvailable;
+            IsAvailable = true;
+
+        }
+        else
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayTransparent;
+            IsAvailable = false;
+        }
+    }
+
+    public void ToggleSelected(bool toggle)
+    {
+        if (toggle)
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayHighlighted;
+            IsSelected = true;         
+        }
+        else
+        {
+            CardOverlay.GetComponent<Image>().sprite = m_OverlayTransparent;
+            IsSelected = false;
+            if (IsAvailable)
+            {
+                ToggleAvailable(true);
+            }
+        }
+
+    }
+
+    public void MoveCard(GameObject location)
+    {
+        StartCoroutine(MoveCard_IE(location));
+    }
+
     //Move card back to (0,0) and Rotate card depending on move type
     IEnumerator MoveCard_IE(GameObject cardLocation)
     {
-        cardLocation.GetComponent<Hand>().AddCard(this.gameObject);
+        cardLocation.GetComponent<IZone>().AddCard(this.gameObject);
         RectTransform cardRT = GetComponent<RectTransform>();
 
         //Variable for position lerp
@@ -282,8 +327,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             cardRT.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
             cardRT.localScale = Vector3.Lerp(currentScale, targetScale, time);
 
-            yield return null;
+            yield return false;
         }
+
+        yield return true;
 
     }
 
@@ -291,7 +338,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     //Called when mouse pointer leaves area
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (CardLocation == E_ZoneType.Hand)
+        if (CardLocation == E_ZoneType.Hand && IsInteractable)
         {
             GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);        
         }
@@ -300,7 +347,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (CardLocation == E_ZoneType.Hand)
+        if (CardLocation == E_ZoneType.Hand && IsInteractable)
         {
             GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 25, 0);
         }
@@ -308,13 +355,48 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Card selectedCard = GetComponentInParent<Player>().playerHand.SelectedCard;
+        if (IsInteractable && IsAvailable) {
+            Card selectedCard = GetComponentInParent<Player>().playerHand.SelectedCard;
+            Card currentCard = this;
 
-        if (selectedCard != null)
-            selectedCard.ToggleSelected();
+            if (selectedCard != null)
+            {
+                if (selectedCard == this)
+                {
+                    GetComponentInParent<Player>().playerHand.SelectedCard = null;
+                    selectedCard.ToggleSelected(false);
+                }
+                else
+                {
+                    GetComponentInParent<Player>().playerHand.SelectedCard = null;
+                    selectedCard.ToggleSelected(false);
 
-        GetComponentInParent<Player>().playerHand.SelectedCard = this;
-        ToggleSelected();
+                    GetComponentInParent<Player>().playerHand.SelectedCard = currentCard;
+                    currentCard.ToggleSelected(true);
+                }                
+            }
+            else
+            {
+                GetComponentInParent<Player>().playerHand.SelectedCard = this;
+                ToggleSelected(true);
+            }
+                
+
+            
+        }
+    }
+
+    public bool CheckValid(Card pileCard)
+    {
+        if (CardColor == pileCard.CardColor || pileCard.CardColor == E_CardColor.Black || CardType == pileCard.CardType)
+            return true;
+        else
+            return false;
+    }
+
+    public override string ToString()
+    {
+        return m_CardObjectId.ToString();
     }
 }
 

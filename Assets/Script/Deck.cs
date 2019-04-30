@@ -89,29 +89,20 @@ public class Deck : NetworkBehaviour
         return ZoneCardContent.transform.GetChild(ZoneCardContent.transform.childCount - 1).GetComponent<Card>();
     }
 
-    public void SetSeed(int seed)
-    {
-        if(isServer)
-            Random.InitState(seed);
-    }
-
-    public void ShuffleDeck(int seed)
+    [ClientRpc]
+    public void RpcShuffleDeck(int seed)
     {
         Random.InitState(seed);
-
-        if (isServer)
+        foreach (Transform card in ZoneCardContent.transform)
         {
-            foreach (Transform card in ZoneCardContent.transform)
-            {
-                card.transform.SetSiblingIndex(Random.Range(0, m_ZoneCardList.Count));
-            }
+            card.transform.SetSiblingIndex(Random.Range(0, m_ZoneCardList.Count));
+        }
 
-            m_ZoneCardList.Clear();
+        m_ZoneCardList.Clear();
 
-            foreach (Transform card in ZoneCardContent.transform)
-            {
-                m_ZoneCardList.Add(card.gameObject);
-            }
+        foreach (Transform card in ZoneCardContent.transform)
+        {
+            m_ZoneCardList.Add(card.gameObject);
         }
     }
 

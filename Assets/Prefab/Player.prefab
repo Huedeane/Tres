@@ -80,6 +80,7 @@ MonoBehaviour:
     type: 3}
   m_CardWidth: 72
   m_SelectedCard: {fileID: 0}
+  m_HasAvailable: 0
 --- !u!222 &3159533278960944656
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -555,7 +556,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6437817323621215392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 875183343151291768}
+        m_MethodName: playCmd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3574638169873081391
@@ -850,6 +862,7 @@ MonoBehaviour:
   playerNum: 0
   playerScore: 0
   myTurn: 0
+  playerCommand: {fileID: 6390911961711481580}
   playerHand: {fileID: 992127401}
   nameText: {fileID: 7755604056723140580}
   messageText: {fileID: 3496000755006669326}
@@ -929,7 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

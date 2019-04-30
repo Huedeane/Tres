@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hand : MonoBehaviour
+public class Hand : MonoBehaviour, IZone
 {
 
     [Header("Card Holder Prefab")]
@@ -11,6 +11,7 @@ public class Hand : MonoBehaviour
     [SerializeField] private GameObject m_CardHolderPrefab;
     [SerializeField] private float m_CardWidth;
     [SerializeField] private Card m_SelectedCard;
+    [SerializeField] private bool m_HasAvailable;
 
     #region Getter & Setter
     public List<GameObject> HandCardList
@@ -64,6 +65,19 @@ public class Hand : MonoBehaviour
             m_SelectedCard = value;
         }
     }
+
+    public bool HasAvailable
+    {
+        get
+        {
+            return m_HasAvailable;
+        }
+
+        set
+        {
+            m_HasAvailable = value;
+        }
+    }
     #endregion
 
     private void ControlSizeWidth()
@@ -113,6 +127,25 @@ public class Hand : MonoBehaviour
         }
 
         ControlSizeWidth();
+    }
+
+    public void SetHighlight()
+    {
+        HasAvailable = false;
+        if (transform.childCount > 0)
+        {
+            foreach (Transform child in transform)
+            {
+                Transform innerChild = child.GetChild(0);
+                Card innerCard = innerChild.GetComponent<Card>();
+                Pile pile = GameObject.Find("Board").GetComponent<Board>().BoardPile;
+                if (innerCard.CheckValid(pile.GetTopCard()))
+                {
+                    innerCard.ToggleAvailable(true);
+                    HasAvailable = true;
+                }               
+            }
+        }
     }
 
     public void AddCard(GameObject cardObject)

@@ -7,16 +7,20 @@ using UnityEngine.Networking;
 
 public class GameManager : NetworkBehaviour {
 
-    #region Variable
-    [Header("Regular Variable")]
+    #region Variable  
     [SerializeField] private Board m_GameBoard;
-    private List<Player> m_PlayerList;
+    [SerializeField] private GameObject m_PlayerListRef;
+    [SerializeField] private GameObject m_StartGameButton;
+    [SerializeField] private List<Player> m_PlayerList;
 
     [Header("Network Variable")]
     [SyncVar]
     private int m_GameDuration;
     [SyncVar]
     private int m_DeckSeed;
+
+    
+    
     #endregion
 
     #region Getter & Setter
@@ -68,32 +72,57 @@ public class GameManager : NetworkBehaviour {
             m_DeckSeed = value;
         }
     }
+
+    public GameObject PlayerListRef
+    {
+        get
+        {
+            return m_PlayerListRef;
+        }
+
+        set
+        {
+            m_PlayerListRef = value;
+        }
+    }
+
+    public GameObject StartGameButton
+    {
+        get
+        {
+            return m_StartGameButton;
+        }
+
+        set
+        {
+            m_StartGameButton = value;
+        }
+    }
     #endregion
 
     #region Private Method
+
     public void UpdatePlayerList()
     {
-        PlayerList.Clear();
-        foreach (Transform child in GameObject.Find("Player List").transform)
-        {
-            PlayerList.Add(child.GetComponent<Player>());
-        }       
+        PlayerList = new List<Player>(PlayerListRef.transform.GetComponentsInChildren<Player>());
     }
     #endregion
 
     #region Public Method
     public void StartGame()
     {
+        UpdatePlayerList();
+
         if (isServer)
         {
             DeckSeed = Random.Range(1, 1000000);
-        }
+            GameBoard.BoardDeck.RpcShuffleDeck(DeckSeed);
+            GameBoard.BoardPile.RpcRandomStartingCard(DeckSeed);
 
-        GameBoard.BoardDeck.ShuffleDeck(DeckSeed);
-
-        foreach (Player player in PlayerList)
-        {
-
+            string convertedString = RpcStringConverter<Player>.ConvertString(PlayerList);
+            
+            GameBoard.RpcDealCard(convertedString, 5, 1f);
+            GameBoard.RpcSetTurn();
         }
 
     }
@@ -107,5 +136,8 @@ public class GameManager : NetworkBehaviour {
     {
 
     }
+
+
+    
     #endregion
 }

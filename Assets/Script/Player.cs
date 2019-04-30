@@ -18,9 +18,8 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public bool myTurn;
 
-
+    public GameObject playerCommand;
     public Hand playerHand;
-
     public Text nameText;
     public Text messageText;
     public IEnumerator currentMessage;
@@ -34,19 +33,13 @@ public class Player : NetworkBehaviour
         playerNum = n;
         playerName = "P" + n;
 
-        if (n == 1)
-            myTurn = true;
-        else
-            myTurn = false;
-
-        Debug.Log(n);
+        myTurn = false;
 
         if (n == 2)
         {
-            GameObject.Find("Game Manager").GetComponent<GameManager>().StartGame();
+            GameObject.Find("Game Manager").GetComponent<GameManager>().StartGameButton.SetActive(true);
         }
 
-        
     }
 
     void Start () {
@@ -71,33 +64,17 @@ public class Player : NetworkBehaviour
         else
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
+            foreach (Transform child in playerCommand.transform)
+            {
+                if (child.name == "Play Button" || child.name == "Extra Button" 
+                    || child.name == "Draw Button" || child.name == "Quit Button")
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
         }
-        
-
-        /*
-        for (int x = 1; x <= playerList.transform.childCount - 1; x++)
-        {
-
-            int playerNum = GetPreviousPlayer(localPlayerNum, x, playerList.transform.childCount);
-            Debug.Log("playerNum: " + playerNum + " num: " + x);
-            Transform playerSlot = playerList.transform.GetChild(playerNum - 1);
-            transform.eulerAngles = new Vector3(0, 0, x * -90);
-
-        }
-        */
-
+             
     }
-
-    /*
-    int GetPreviousPlayer(int num, int minus, int max)
-    {
-        int x = (num - minus) % 4;
-        if (x == 0)
-            return max;
-        else
-            return x;
-    }
-    */
 
     [Command]
     public void CmdServerCommand(string cmd)
@@ -175,6 +152,11 @@ public class Player : NetworkBehaviour
             yield return null;
         }
 
+    }
+
+    public override string ToString()
+    {
+        return playerNum.ToString();
     }
 
 }
