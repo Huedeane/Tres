@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.U2D;
@@ -27,6 +28,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] private E_CardColor m_CardColor;
     [SerializeField] private E_CardType m_CardType;
     [SerializeField] private E_ZoneType m_CardLocation;
+    [TextArea()]
+    [SerializeField] private string m_CardDescription;
 
     [Header("Sprite")]
     private Sprite m_FrontImage;
@@ -214,8 +217,18 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             m_IsAvailable = value;
         }
     }
+    public string CardDescription
+    {
+        get
+        {
+            return m_CardDescription;
+        }
 
-
+        set
+        {
+            m_CardDescription = value;
+        }
+    }
     #endregion
 
     public void Awake()
@@ -351,6 +364,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 25, 0);
         }
+
+        GameObject infoCardImage = GameObject.FindGameObjectWithTag("InfoCardImage");
+        GameObject infoCardText = GameObject.FindGameObjectWithTag("InfoCardDescription");
+
+        infoCardImage.GetComponent<Image>().enabled = true;
+        infoCardImage.GetComponent<Image>().sprite = FrontImage;
+        infoCardText.GetComponent<TextMeshProUGUI>().text = CardDescription;
     }
 
     public void OnPointerClick(PointerEventData eventData)

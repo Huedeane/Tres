@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Deck
   - Pile
+  - slider
+  - Chatbox
+  - InfoCardImage
+  - InfoCardDescription
+  - PlayerStatus
+  - ChatInput
   layers:
   - Default
   - TransparentFX

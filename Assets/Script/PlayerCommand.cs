@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerCommand : MonoBehaviour
 {
@@ -51,6 +53,27 @@ public class PlayerCommand : MonoBehaviour
                 card.ToggleAvailable(false);
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
+                break;
+            case "Enable Chat":
+                Debug.Log("Test");
+                GameObject.Find("Chat Input").GetComponent<InputField>().interactable = true;
+                break;
+            case "Toggle Time":
+                GameObject.Find("Time").GetComponentInChildren<InfoTime>().ToggleTime();
+                break;
+            case "Set Connection Status":
+                GameObject[] playerStats = GameObject.FindGameObjectsWithTag("PlayerStatus");
+                foreach (GameObject gameObject in playerStats)
+                {
+                    if (gameObject.name == "Player 1")
+                    {
+                        gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("Player 1: Connected");
+                    }
+                    else if (gameObject.name == "Player 2")
+                    {
+                        gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("Player 2: Connected");
+                    }
+                }
                 break;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 
 public class Player : NetworkBehaviour
 {
+    public static Player localPlayer;
 
     [SyncVar]
     public string playerName;
@@ -18,6 +20,13 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public bool myTurn;
 
+    [SyncVar]
+    public string player1Status = "Waiting", player2Status = "Waiting";
+
+    [SyncVar(hook = "OnChangeTextMessage")]
+    string textMessage;
+
+    public NetworkManager netMan;
     public GameObject playerCommand;
     public Hand playerHand;
     public Text nameText;
@@ -26,14 +35,19 @@ public class Player : NetworkBehaviour
 
     public override void OnStartServer()
     {
-        NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
+        netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
 
         int n = netMan.numPlayers;
         playerScore = 0;
         playerNum = n;
-        playerName = "P" + n;
+        playerName = "Player " + n;
 
         myTurn = false;
+
+        if (n == 1)
+        {
+
+        }
 
         if (n == 2)
         {
@@ -44,10 +58,8 @@ public class Player : NetworkBehaviour
 
     void Start () {
         //Set Up Player
-        
 
-        NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
-        
+        netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
         netMan.GetComponent<NetworkManagerHUD>().showGUI = false;
 
         GameObject playerList = GameObject.Find("Player List");
@@ -55,10 +67,11 @@ public class Player : NetworkBehaviour
         transform.localPosition = Vector3.zero;
 
         int localPlayerNum = playerNum;
-        nameText.text = playerName;
+        nameText.text = "P" + playerNum;
 
         if (isLocalPlayer)
         {
+            localPlayer = this;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else
@@ -73,7 +86,35 @@ public class Player : NetworkBehaviour
                 }
             }
         }
-             
+
+        if (isServer)
+        {
+            
+        }
+
+    }
+
+    private void Update()
+    {
+        if (isServer)
+        {
+            if (netMan.numPlayers != 2)
+                GameObject.FindGameObjectWithTag("ChatInput").GetComponent<InputField>().interactable = false;
+            if (netMan.numPlayers == 2 && !GameObject.FindGameObjectWithTag("ChatInput").GetComponent<InputField>().IsInteractable())
+                CmdServerCommand("Enable Chat");
+        }
+
+    }
+
+    void OnChangeTextMessage(string msg)
+    {
+        GameObject.FindGameObjectWithTag("Chatbox").GetComponent<TextMeshProUGUI>().text += msg + "\n";
+    }
+
+    [Command]
+    public void CmdChatMessage(string message)
+    {
+        textMessage = playerName + ": " + message;
     }
 
     [Command]

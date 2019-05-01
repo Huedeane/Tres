@@ -115,6 +115,8 @@ public class GameManager : NetworkBehaviour {
 
         if (isServer)
         {
+            Player.localPlayer.CmdServerCommand("Toggle Time");
+
             DeckSeed = Random.Range(1, 1000000);
             GameBoard.BoardDeck.RpcShuffleDeck(DeckSeed);
             GameBoard.BoardPile.RpcRandomStartingCard(DeckSeed);
