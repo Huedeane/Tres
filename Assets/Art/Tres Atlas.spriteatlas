@@ -40,9 +40,8 @@ SpriteAtlas:
   - {fileID: 21300028, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300026, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300104, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
-  - {fileID: 21300002, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
-  - {fileID: 21300022, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300076, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300002, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300042, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300034, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300064, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
@@ -68,6 +67,8 @@ SpriteAtlas:
   - {fileID: 21300084, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300116, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300016, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300012, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
+  - {fileID: 21300022, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300044, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300020, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300052, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
@@ -98,16 +99,14 @@ SpriteAtlas:
   - {fileID: 21300048, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300094, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   - {fileID: 21300008, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
-  - {fileID: 21300012, guid: cc624574ecad6ce42855528bc4367c75, type: 3}
   m_PackedSpriteNamesToIndex:
   - Red One
   - Blue Two
   - Yellow Three
   - Yellow Two
   - Green Two
-  - Black Change Color
-  - Black Change Color All
   - Blue One
+  - Wild Change Color
   - Yellow Zero
   - Yellow Six
   - Red Eight
@@ -133,6 +132,8 @@ SpriteAtlas:
   - Blue Five
   - Green Eight
   - Red Draw Four
+  - Wild Draw Four
+  - Wild Change Color All
   - Yellow Draw Two
   - Green Draw Four
   - Red Two
@@ -163,6 +164,5 @@ SpriteAtlas:
   - Yellow Reverse
   - Blue Zero
   - Blue Change Color
-  - Black Draw Four
   m_Tag: Tres Atlas
   m_IsVariant: 0

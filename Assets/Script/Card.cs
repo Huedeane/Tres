@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
-public enum E_CardColor { Red, Blue, Yellow, Green, Black}
+public enum E_CardColor { Red, Blue, Yellow, Green, Wild}
 public enum E_CardType
 {
     Zero = 0, One = 1, Two = 2, Three = 3,
@@ -438,7 +438,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             return true;
         }
-        else if (pileCard.CardColor == E_CardColor.Black)
+        else if (pileCard.CardColor == E_CardColor.Wild)
         {
             return true;
         }
@@ -447,7 +447,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             return true;
         }
         else
-            return true;
+            return false;
     }
 
     public override string ToString()

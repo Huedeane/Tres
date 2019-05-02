@@ -165,6 +165,7 @@ MonoBehaviour:
   m_CardColor: 0
   m_CardType: 0
   m_CardLocation: 0
+  m_CardDescription: 
   m_ImageAtlas: {fileID: 4343727234628468602, guid: a261a83eefe8efa49be229589dd328aa,
     type: 2}
   m_OverlayTransparent: {fileID: 21300000, guid: 13a72d444c718f8468f54e34a4fd5b8f,
@@ -173,3 +174,7 @@ MonoBehaviour:
     type: 3}
   m_OverlayAvailable: {fileID: 21300000, guid: 966afed1854a6da4bafc11ea4e82160c, type: 3}
   m_CardOverlay: {fileID: 1384370254929388}
+  m_IsAvailable: 0
+  m_IsSelected: 0
+  m_IsInteractable: 0
+  m_IsHidden: 0

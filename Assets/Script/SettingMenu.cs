@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
@@ -11,6 +13,13 @@ public class SettingMenu : MonoBehaviour
     public Slider SoundEffectSlider;
     public Slider BackgroundSlider;
 
+    public NetworkManager netMan;
+
+    public void ExitGame()
+    {
+        Destroy(netMan.gameObject);
+        SceneManager.LoadScene("Main Menu");       
+    }
 
     public void SetMasterVolume(float volume)
     {

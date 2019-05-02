@@ -59,6 +59,9 @@ public class PlayerCommand : MonoBehaviour
                 card.ToggleAvailable(false);
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
+                Debug.Log(card.CardColor + " " + card.CardType);
+                Debug.Log(hand.name);
+                Debug.Log(hand.GetComponentInParent<Player>().playerName);
                 hand.UpdateCardList();
                 myPlayer.myTurn = false;
                 otherPlayer.myTurn = true;
@@ -87,9 +90,16 @@ public class PlayerCommand : MonoBehaviour
                 if (myPlayer.playerHand.HandCardList.Count == 0)
                 {
                     if (myPlayer.isLocalPlayer)
+                    {
+                        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Victory_Theme);
                         finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Win");
+                    }
                     else
+                    {
+                        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Defeat_Theme);
                         finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                    }
+                        
                 }
                 else
                 {
@@ -106,7 +116,7 @@ public class PlayerCommand : MonoBehaviour
 
     public void playCmd()
     {
-        if (myPlayer.myTurn == true)
+        if (myPlayer.myTurn == true && myPlayer.playerHand.SelectedCard != null)
         {
             myPlayer.playerScore += 50;
             myPlayer.CmdServerCommandTurn("Play Card:" + myPlayer.playerHand.SelectedCard.CardObjectId);         

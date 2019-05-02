@@ -118,6 +118,12 @@ public class GameManager : NetworkBehaviour {
     #endregion
 
     #region Public Method
+    [ClientRpc]
+    public void RpcPlayMusic()
+    {
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Main_Game_Background);
+    }
+
     public void StartGame()
     {
         UpdatePlayerList();
@@ -133,24 +139,12 @@ public class GameManager : NetworkBehaviour {
             GameBoard.BoardDeck.RpcSetId();
 
             string convertedString = RpcStringConverter<Player>.ConvertString(PlayerList);
-            
-            GameBoard.RpcDealCard(convertedString, 2, 1f);
+
+            RpcPlayMusic();
+            GameBoard.RpcDealCard(convertedString, 5, 1f);
             GameBoard.RpcSetTurn();
         }
 
-    }
-
-    public void EndGame()
-    {
-        
-    }
-
-    public void SetPlayerSequence()
-    {
-
-    }
-
-
-    
+    }  
     #endregion
 }

@@ -4,60 +4,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum E_BackGroundMusic { Main_Menu_Background, Main_Game_Waiting, Main_Game_Background}
+public enum E_BackGroundMusic { Main_Menu_Background, Main_Game_Waiting, Main_Game_Background, Victory_Theme, Defeat_Theme}
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private static AudioManager audioManager;
+    [SerializeField] private static AudioManager Instance;
 
     [Header("Audio Source Reference")]
     public AudioSource MainMenuBackground;
     public AudioSource MainGameWaiting;
     public AudioSource MainGameBackground;
+    public AudioSource VictoryTheme;
+    public AudioSource DefeatTheme;
 
     [Header("Current Audio Playing")]
     public AudioSource BackgroundMusic;
     public AudioSource SoundEffect;
-    
-
-    public static AudioManager Instance
-    {
-        get
-        {
-            if (!audioManager)
-            {
-                audioManager = FindObjectOfType(typeof(AudioManager)) as AudioManager;
-
-                if (!audioManager)
-                {
-                    Debug.LogError("Error: There is no active Game Manager attached to a gameObject");
-                }
-                else
-                {
-                    audioManager.Init();
-                }
-            }
-
-            return audioManager;
-        }
-        set
-        {
-            audioManager = value;
-        }
-    }
 
     private void Awake()
     {
-        Instance = Instance;
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    
-    private void Init()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
     private void OnSceneUnloaded(Scene scene)
     {
         
@@ -65,27 +41,27 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        Debug.Log(scene.name);
         switch (scene.name)
         {
             case "Main Menu":
                 Debug.Log(scene.name);
-                ChangeBackground(E_BackGroundMusic.Main_Menu_Background);
+                Instance.ChangeBackground(E_BackGroundMusic.Main_Menu_Background);
                 break;
             case "Main Game":
-                ChangeBackground(E_BackGroundMusic.Main_Game_Waiting);
+                Instance.ChangeBackground(E_BackGroundMusic.Main_Game_Waiting);
                 break;
         }
     }
 
     public void ChangeBackground(E_BackGroundMusic background)
     {
-        BackgroundMusic.Stop();
-        Debug.Log("Test");
+
+        if(BackgroundMusic.isPlaying)
+            BackgroundMusic.Stop();
+
         switch (background)
         {
             case E_BackGroundMusic.Main_Menu_Background:
-                Debug.Log("Test");
                 BackgroundMusic = MainMenuBackground;
                 BackgroundMusic.Play();
                 break;
@@ -95,6 +71,14 @@ public class AudioManager : MonoBehaviour
                 break;
             case E_BackGroundMusic.Main_Game_Background:
                 BackgroundMusic = MainGameBackground;
+                BackgroundMusic.Play();
+                break;
+            case E_BackGroundMusic.Victory_Theme:
+                BackgroundMusic = VictoryTheme;
+                BackgroundMusic.Play();
+                break;
+            case E_BackGroundMusic.Defeat_Theme:
+                BackgroundMusic = DefeatTheme;
                 BackgroundMusic.Play();
                 break;
         }
