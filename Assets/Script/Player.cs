@@ -104,9 +104,10 @@ public class Player : NetworkBehaviour
     void OnTurnChange(bool isTurn)
     {
        
-        if (isTurn && isLocalPlayer)
+        if (isTurn)
         {         
             playerNameBox.GetComponentInChildren<Image>().color = Color.red;
+            if(isLocalPlayer)
             playerHand.SetHighlight(true);
         }
         else

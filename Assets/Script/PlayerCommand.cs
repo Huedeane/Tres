@@ -60,7 +60,6 @@ public class PlayerCommand : MonoBehaviour
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
                 hand.UpdateCardList();
-                Debug.Log("Top Card Change");
                 myPlayer.myTurn = false;
                 otherPlayer.myTurn = true;
                 break;
@@ -80,6 +79,24 @@ public class PlayerCommand : MonoBehaviour
                         gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("Player 2: Connected");
                     }
                 }
+                break;
+            case "End Game":
+                GameObject finishMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().finishMenu;
+                finishMenu.SetActive(true);
+
+                if (myPlayer.playerHand.HandCardList.Count == 0)
+                {
+                    if (myPlayer.isLocalPlayer)
+                        finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Win");
+                    else
+                        finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                }
+                else
+                {
+                    finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                }
+
+               
                 break;
         }
 

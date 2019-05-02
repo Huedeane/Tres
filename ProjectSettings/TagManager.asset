@@ -13,6 +13,7 @@ TagManager:
   - ChatInput
   - ConnectionStatus
   - Card
+  - GameManager
   layers:
   - Default
   - TransparentFX

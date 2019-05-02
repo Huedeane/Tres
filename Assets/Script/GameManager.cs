@@ -22,6 +22,7 @@ public class GameManager : NetworkBehaviour {
 
     public bool startScoreTrack = false;
     public TextMeshProUGUI scoreText;
+    public GameObject finishMenu;
     
     #endregion
 
@@ -133,7 +134,7 @@ public class GameManager : NetworkBehaviour {
 
             string convertedString = RpcStringConverter<Player>.ConvertString(PlayerList);
             
-            GameBoard.RpcDealCard(convertedString, 5, 1f);
+            GameBoard.RpcDealCard(convertedString, 2, 1f);
             GameBoard.RpcSetTurn();
         }
 
@@ -141,7 +142,7 @@ public class GameManager : NetworkBehaviour {
 
     public void EndGame()
     {
-
+        
     }
 
     public void SetPlayerSequence()

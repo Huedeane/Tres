@@ -126,6 +126,11 @@ public class Hand : MonoBehaviour, IZone
             }
         }
 
+        if (HandCardList.Count == 0)
+        {
+            GetComponentInParent<Player>().CmdServerCommand("End Game");
+        }
+
         ControlSizeWidth();
     }
 
@@ -146,7 +151,6 @@ public class Hand : MonoBehaviour, IZone
                     if (toggle)
                     {
                         Pile pile = GameObject.Find("Board").GetComponent<Board>().BoardPile;
-                        Debug.Log(Player.localPlayer.playerName + " Top Card: " + pile.GetTopCard().CardColor + " " + pile.GetTopCard().CardType);
                         if (innerCard.CheckValid(pile.GetTopCard()))
                         {
                             innerCard.ToggleAvailable(true);
