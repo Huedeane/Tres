@@ -10,8 +10,9 @@ TagManager:
   - Chatbox
   - InfoCardImage
   - InfoCardDescription
-  - PlayerStatus
   - ChatInput
+  - ConnectionStatus
+  - Card
   layers:
   - Default
   - TransparentFX

@@ -106,7 +106,7 @@ public class Hand : MonoBehaviour, IZone
         }
     }
 
-    private void UpdateCardList()
+    public void UpdateCardList()
     {
         //Clear out the Card List
         HandCardList.Clear();

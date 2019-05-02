@@ -106,5 +106,17 @@ public class Deck : NetworkBehaviour
         }
     }
 
+    [ClientRpc]
+    public void RpcSetId()
+    {
+        int x = 0;
+
+        foreach (Transform card in ZoneCardContent.transform)
+        {
+            card.GetComponent<Card>().CardObjectId = x;
+            x++;
+        }
+    }
+
 
 }

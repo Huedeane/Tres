@@ -120,6 +120,7 @@ public class GameManager : NetworkBehaviour {
             DeckSeed = Random.Range(1, 1000000);
             GameBoard.BoardDeck.RpcShuffleDeck(DeckSeed);
             GameBoard.BoardPile.RpcRandomStartingCard(DeckSeed);
+            GameBoard.BoardDeck.RpcSetId();
 
             string convertedString = RpcStringConverter<Player>.ConvertString(PlayerList);
             

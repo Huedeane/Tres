@@ -46,17 +46,17 @@ public class PlayerCommand : MonoBehaviour
                 break;
             case "Play Card":
                 Pile pile = GameObject.FindGameObjectWithTag("Pile").GetComponent<Pile>();
-                card = myPlayer.playerHand.SelectedCard;
+
+                card = GetCard(int.Parse(parts[1]));
+                Hand hand = card.GetComponentInParent<Hand>();
+
                 card.CardLocation = E_ZoneType.Pile;
                 card.Reveal();
                 card.IsInteractable = false;
                 card.ToggleAvailable(false);
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
-                break;
-            case "Enable Chat":
-                Debug.Log("Test");
-                GameObject.Find("Chat Input").GetComponent<InputField>().interactable = true;
+                hand.UpdateCardList();
                 break;
             case "Toggle Time":
                 GameObject.Find("Time").GetComponentInChildren<InfoTime>().ToggleTime();
@@ -83,13 +83,13 @@ public class PlayerCommand : MonoBehaviour
 
     public void playCmd()
     {
-        if (myPlayer.myTurn == true)
+        if (myPlayer.myTurn == true && myPlayer.playerHand.SelectedCard != null)
         {
-            myPlayer.CmdServerCommandTurn("Play Card");
+            myPlayer.CmdServerCommandTurn("Play Card:" + myPlayer.playerHand.SelectedCard.CardObjectId);         
         }
         else
         {
-            myPlayer.sendMessage("NOT YOUR TURN");
+            myPlayer.sendMessage("NOT YOUR TURN OR CARD NOT SELECTED");
         }
     }
 
@@ -139,6 +139,20 @@ public class PlayerCommand : MonoBehaviour
         {
             myPlayer.sendMessage("NOT YOUR TURN!");
         }
+    }
+
+    private Card GetCard(int x)
+    {
+        GameObject[] cardArray = GameObject.FindGameObjectsWithTag("Card");
+        foreach (GameObject card in cardArray)
+        {
+            if (card.GetComponent<Card>().CardObjectId == x)
+            {
+                return card.GetComponent<Card>();
+            }
+        }
+
+        return null;
     }
 
 }

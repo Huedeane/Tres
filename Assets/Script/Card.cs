@@ -46,6 +46,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] private bool m_IsAvailable;
     [SerializeField] private bool m_IsSelected;
     [SerializeField] private bool m_IsInteractable;
+    [SerializeField] private bool m_IsHidden;
     #endregion
 
     #region Getter & Setter
@@ -229,6 +230,19 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             m_CardDescription = value;
         }
     }
+
+    public bool IsHidden
+    {
+        get
+        {
+            return m_IsHidden;
+        }
+
+        set
+        {
+            m_IsHidden = value;
+        }
+    }
     #endregion
 
     public void Awake()
@@ -241,6 +255,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
         IsSelected = false;
         IsAvailable = false;
+        
         Reveal();
     }
 
@@ -255,11 +270,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void Reveal()
     {
         GetComponent<Image>().sprite = m_FrontImage;
+        IsHidden = false;
     }
 
     public void Hide()
     {
         GetComponent<Image>().sprite = m_BackImage;
+        IsHidden = true;
     }
 
     public void ToggleAvailable(bool toggle)
@@ -368,9 +385,18 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         GameObject infoCardImage = GameObject.FindGameObjectWithTag("InfoCardImage");
         GameObject infoCardText = GameObject.FindGameObjectWithTag("InfoCardDescription");
 
-        infoCardImage.GetComponent<Image>().enabled = true;
-        infoCardImage.GetComponent<Image>().sprite = FrontImage;
-        infoCardText.GetComponent<TextMeshProUGUI>().text = CardDescription;
+        if (IsHidden)
+        {
+            infoCardImage.GetComponent<Image>().enabled = true;
+            infoCardImage.GetComponent<Image>().sprite = BackImage;
+            infoCardText.GetComponent<TextMeshProUGUI>().text = "";
+        }
+        else
+        {
+            infoCardImage.GetComponent<Image>().enabled = true;
+            infoCardImage.GetComponent<Image>().sprite = FrontImage;
+            infoCardText.GetComponent<TextMeshProUGUI>().text = CardDescription;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)

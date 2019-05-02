@@ -20,8 +20,7 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public bool myTurn;
 
-    [SyncVar]
-    public string player1Status = "Waiting", player2Status = "Waiting";
+    
 
     [SyncVar(hook = "OnChangeTextMessage")]
     string textMessage;
@@ -46,12 +45,17 @@ public class Player : NetworkBehaviour
 
         if (n == 1)
         {
-
+            GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerConnected(1);
+            CmdServerMessage("Player 1 Has Connected");
         }
 
         if (n == 2)
         {
+            
+            GameObject.FindGameObjectWithTag("ChatInput").GetComponent<Chatbox>().CmdToggleChat();
+            GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerConnected(2);
             GameObject.Find("Game Manager").GetComponent<GameManager>().StartGameButton.SetActive(true);
+            CmdServerMessage("Player 2 Has Connected");
         }
 
     }
@@ -71,6 +75,7 @@ public class Player : NetworkBehaviour
 
         if (isLocalPlayer)
         {
+
             localPlayer = this;
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
@@ -87,24 +92,9 @@ public class Player : NetworkBehaviour
             }
         }
 
-        if (isServer)
-        {
-            
-        }
 
     }
 
-    private void Update()
-    {
-        if (isServer)
-        {
-            if (netMan.numPlayers != 2)
-                GameObject.FindGameObjectWithTag("ChatInput").GetComponent<InputField>().interactable = false;
-            if (netMan.numPlayers == 2 && !GameObject.FindGameObjectWithTag("ChatInput").GetComponent<InputField>().IsInteractable())
-                CmdServerCommand("Enable Chat");
-        }
-
-    }
 
     void OnChangeTextMessage(string msg)
     {
@@ -115,6 +105,12 @@ public class Player : NetworkBehaviour
     public void CmdChatMessage(string message)
     {
         textMessage = playerName + ": " + message;
+    }
+
+    [Command]
+    public void CmdServerMessage(string message)
+    {
+        textMessage = message;
     }
 
     [Command]

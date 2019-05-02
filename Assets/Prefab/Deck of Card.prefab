@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Two
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -441,11 +445,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 384381231335025690}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -454,12 +453,6 @@ PrefabInstance:
 --- !u!224 &453952692149005014 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 383214584288604662}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &384381231335025690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 383214584288604662}
   m_PrefabAsset: {fileID: 0}
@@ -473,6 +466,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue One
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -591,22 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 463632586446944313}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &463632586446944313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 462688178147386837}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &393638638290058997 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -623,6 +609,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Three
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -741,22 +731,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 560288391251514950}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &560288391251514950 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 559115136390532010}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &351228487291424906 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -773,6 +752,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Two
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -891,11 +874,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 1148325145532614429}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -904,12 +882,6 @@ PrefabInstance:
 --- !u!224 &934198417122148817 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1147081659373755121}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1148325145532614429 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1147081659373755121}
   m_PrefabAsset: {fileID: 0}
@@ -923,6 +895,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Red Zero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -1031,11 +1007,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 1684678611574953420}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -1044,12 +1015,6 @@ PrefabInstance:
 --- !u!224 &1475057956693021440 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1685970611544246304}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1684678611574953420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1685970611544246304}
   m_PrefabAsset: {fileID: 0}
@@ -1063,6 +1028,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Eight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -1181,11 +1150,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 1754372200696742438}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -1194,12 +1158,6 @@ PrefabInstance:
 --- !u!224 &1964012646785811690 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1755316624020332490}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1754372200696742438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 1755316624020332490}
   m_PrefabAsset: {fileID: 0}
@@ -1213,6 +1171,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Four
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -1331,22 +1293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2015515905566788480}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2015515905566788480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2016598996205508204}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1792949600771362124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -1363,6 +1314,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Two
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -1481,11 +1436,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2211233506047466395}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -1494,12 +1444,6 @@ PrefabInstance:
 --- !u!224 &2141103218450767191 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2209871293529900663}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2211233506047466395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2209871293529900663}
   m_PrefabAsset: {fileID: 0}
@@ -1514,6 +1458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red One
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1626,11 +1574,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229093097578860}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -1639,12 +1582,6 @@ PrefabInstance:
 --- !u!224 &2018504183749584800 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400017963973760}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2241229093097578860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400017963973760}
   m_PrefabAsset: {fileID: 0}
@@ -1659,6 +1596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Three
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,22 +1712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229092796028340}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2241229092796028340 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400018200299608}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504183450325880 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -1804,6 +1734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Four
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1916,11 +1850,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229093574943173}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -1929,12 +1858,6 @@ PrefabInstance:
 --- !u!224 &2018504184229046025 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400018978208809}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2241229093574943173 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400018978208809}
   m_PrefabAsset: {fileID: 0}
@@ -1949,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Nine
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2061,22 +1988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229092100652982}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2241229092100652982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400019114517082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182754752890 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2094,6 +2010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Seven
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2206,22 +2126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229092124260894}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2241229092124260894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400019139143666}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182776265938 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2239,6 +2148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Two
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2351,11 +2264,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229091716712693}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -2364,12 +2272,6 @@ PrefabInstance:
 --- !u!224 &2018504182379138617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400019275814169}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2241229091716712693 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400019275814169}
   m_PrefabAsset: {fileID: 0}
@@ -2384,6 +2286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Five
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2496,22 +2402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229091820816477}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2241229091820816477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400019372578225}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504182475181713 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2529,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Six
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2641,11 +2540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229092401712390}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -2654,12 +2548,6 @@ PrefabInstance:
 --- !u!224 &2018504183056075722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400019953504490}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2241229092401712390 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 2242400019953504490}
   m_PrefabAsset: {fileID: 0}
@@ -2674,6 +2562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Eight
       objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2786,22 +2678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2241229092488280982}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2241229092488280982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2242400020047373946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2018504183150968154 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2818,6 +2699,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Nine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -2936,22 +2821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2481528085014436393}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2481528085014436393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2482824483559737285}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2407582492067519717 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -2968,6 +2842,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green One
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3086,22 +2964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 2594169529520807076}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &2594169529520807076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2595406417040146760}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2817296585244301928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3118,6 +2985,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Eight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3236,11 +3107,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4239901452795688801}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -3249,12 +3115,6 @@ PrefabInstance:
 --- !u!224 &4165403905022112173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4238957055274445453}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4239901452795688801 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4238957055274445453}
   m_PrefabAsset: {fileID: 0}
@@ -3268,6 +3128,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Nine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3386,11 +3250,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4362400860670913589}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -3399,12 +3258,6 @@ PrefabInstance:
 --- !u!224 &4581013321653119737 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4363626761664967129}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4362400860670913589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4363626761664967129}
   m_PrefabAsset: {fileID: 0}
@@ -3418,6 +3271,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow One
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3536,11 +3393,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4594097895322381406}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -3549,12 +3401,6 @@ PrefabInstance:
 --- !u!224 &4384492358727494290 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4595194040521535922}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4594097895322381406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4595194040521535922}
   m_PrefabAsset: {fileID: 0}
@@ -3568,6 +3414,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Four
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3686,22 +3536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4622316525105183099}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &4622316525105183099 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4621026852470236311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4844922412310822839 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3718,6 +3557,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Five
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3836,22 +3679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4718036159551282533}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &4718036159551282533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4718998285095321737}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4782980875435514793 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -3868,6 +3700,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Nine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -3986,11 +3822,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 4838887910187157794}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -3999,12 +3830,6 @@ PrefabInstance:
 --- !u!224 &4629266980429484014 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4837928099639923918}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4838887910187157794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 4837928099639923918}
   m_PrefabAsset: {fileID: 0}
@@ -4018,6 +3843,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Zero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4131,22 +3960,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 5151928098175713104}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &5151928098175713104 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5150913308287935164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4928636115714275740 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4163,6 +3981,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Seven
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4281,22 +4103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 5657945794661113337}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &5657945794661113337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5657054029784055829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5592437853954136885 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4313,6 +4124,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Three
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4431,22 +4246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 5775825853226733169}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &5775825853226733169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5774511996176208797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5998372641688930493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4463,6 +4267,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Four
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4581,22 +4389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 6131312406274145103}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &6131312406274145103 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 6130005156485539491}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6201341263916629379 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4613,6 +4410,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Eight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4731,22 +4532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 6772277679580658524}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &6772277679580658524 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 6773165044776462000}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6837217997416086928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -4763,6 +4553,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Seven
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -4881,11 +4675,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7022099588142824590}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -4894,12 +4683,6 @@ PrefabInstance:
 --- !u!224 &7091719702346070594 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7023197924312162658}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7022099588142824590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7023197924312162658}
   m_PrefabAsset: {fileID: 0}
@@ -4913,6 +4696,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Zero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5026,22 +4813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7074080812542136251}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &7074080812542136251 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7073118817961071191}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7004632497030531447 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5058,6 +4834,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Seven
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5176,22 +4956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7273791025684760084}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &7273791025684760084 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7274819134298594296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7487490868703641816 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5208,6 +4977,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Six
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5326,22 +5099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7383742775928623301}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &7383742775928623301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7384981984342002985}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7305130855641880073 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5358,6 +5120,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Five
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5476,11 +5242,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7407537261162776100}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -5489,12 +5250,6 @@ PrefabInstance:
 --- !u!224 &7337912748921143528 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7406223427735624648}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7407537261162776100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7406223427735624648}
   m_PrefabAsset: {fileID: 0}
@@ -5508,6 +5263,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Zero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5621,11 +5380,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 7998463589672192795}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -5634,12 +5388,6 @@ PrefabInstance:
 --- !u!224 &7789287137481592279 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7999707206826514167}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7998463589672192795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 7999707206826514167}
   m_PrefabAsset: {fileID: 0}
@@ -5653,6 +5401,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Blue Three
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5771,11 +5523,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 8249024481520523431}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
@@ -5784,12 +5531,6 @@ PrefabInstance:
 --- !u!224 &8170434826346339947 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8250180123291043147}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8249024481520523431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
     type: 3}
   m_PrefabInstance: {fileID: 8250180123291043147}
   m_PrefabAsset: {fileID: 0}
@@ -5803,6 +5544,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Five
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -5921,22 +5666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 8347399152029224761}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &8347399152029224761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8346014941233353429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8128628361381267957 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -5953,6 +5687,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Green Six
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -6071,22 +5809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 9056979994035997573}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &9056979994035997573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 9057917811700897385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9126967345112632649 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
@@ -6103,6 +5830,10 @@ PrefabInstance:
     - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
       propertyPath: m_Name
       value: Yellow Six
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727332640764646, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
+      propertyPath: m_TagString
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
@@ -6221,22 +5952,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
-      propertyPath: m_CardOverlay
-      value: 
-      objectReference: {fileID: 9207075985855585375}
-    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
-        type: 3}
       propertyPath: m_CardDescription
       value: Regular card that can be play to card with the same number or color
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
---- !u!1 &9207075985855585375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384370254929388, guid: f8e55208da59da24d846adec58a2e60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 9206186395867791795}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8997983096546597523 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224529293036411680, guid: f8e55208da59da24d846adec58a2e60d,

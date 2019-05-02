@@ -1,20 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class Chatbox : MonoBehaviour
-{
-    InputField InputField;
+#pragma warning disable 0618
 
-    private void Start()
+public class Chatbox : NetworkBehaviour
+{
+    public InputField InputField;
+
+    [SyncVar]
+    public bool CanInteract = false;
+
+    [Command]
+    public void CmdToggleChat()
     {
-        InputField = GetComponent<InputField>();
+        CanInteract = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        InputField.interactable = CanInteract;
 
         if (InputField.text != "" && (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.KeypadEnter)))
         {
