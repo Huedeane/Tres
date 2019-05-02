@@ -862,8 +862,10 @@ MonoBehaviour:
   playerNum: 0
   playerScore: 0
   myTurn: 0
+  netMan: {fileID: 0}
   playerCommand: {fileID: 6390911961711481580}
   playerHand: {fileID: 992127401}
+  playerNameBox: {fileID: 4942751271610700617}
   nameText: {fileID: 7755604056723140580}
   messageText: {fileID: 3496000755006669326}
 --- !u!114 &875183343151291768

@@ -434,8 +434,21 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public bool CheckValid(Card pileCard)
     {
-        if (CardColor == pileCard.CardColor || pileCard.CardColor == E_CardColor.Black || CardType == pileCard.CardType)
+        if (CardColor == pileCard.CardColor)
+        {
+            Debug.Log(CardColor + " = " + pileCard.CardColor);
             return true;
+        }
+        else if (pileCard.CardColor == E_CardColor.Black)
+        {
+            Debug.Log(CardColor + " = black");
+            return true;
+        }
+        else if (CardType == pileCard.CardType)
+        {
+            Debug.Log(CardType + " = " + pileCard.CardType);
+            return true;
+        }
         else
             return false;
     }

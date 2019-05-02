@@ -1614,6 +1614,8 @@ MonoBehaviour:
   m_PlayerListRef: {fileID: 956687763}
   m_StartGameButton: {fileID: 1248518654}
   m_PlayerList: []
+  startScoreTrack: 0
+  scoreText: {fileID: 16377670}
 --- !u!114 &787979205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,6 +4544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AssetId.i15
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679773805410905409, guid: c1320921d17d1a841a347bed9be7bd02,
+        type: 3}
+      propertyPath: m_CardDescription
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1320921d17d1a841a347bed9be7bd02, type: 3}

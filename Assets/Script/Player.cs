@@ -17,10 +17,8 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public int playerNum, playerScore;
 
-    [SyncVar]
+    [SyncVar(hook = "OnTurnChange")]
     public bool myTurn;
-
-    
 
     [SyncVar(hook = "OnChangeTextMessage")]
     string textMessage;
@@ -28,6 +26,7 @@ public class Player : NetworkBehaviour
     public NetworkManager netMan;
     public GameObject playerCommand;
     public Hand playerHand;
+    public GameObject playerNameBox;
     public Text nameText;
     public Text messageText;
     public IEnumerator currentMessage;
@@ -72,6 +71,7 @@ public class Player : NetworkBehaviour
 
         int localPlayerNum = playerNum;
         nameText.text = "P" + playerNum;
+        playerScore = 0;
 
         if (isLocalPlayer)
         {
@@ -101,6 +101,23 @@ public class Player : NetworkBehaviour
         GameObject.FindGameObjectWithTag("Chatbox").GetComponent<TextMeshProUGUI>().text += msg + "\n";
     }
 
+    void OnTurnChange(bool isTurn)
+    {
+       
+        if (isTurn && isLocalPlayer)
+        {         
+            playerNameBox.GetComponentInChildren<Image>().color = Color.red;
+            playerHand.SetHighlight(true);
+        }
+        else
+        {
+            playerNameBox.GetComponentInChildren<Image>().color = Color.white;
+            playerHand.SetHighlight(false);
+        }
+
+        myTurn = isTurn;
+    }
+
     [Command]
     public void CmdChatMessage(string message)
     {
@@ -125,14 +142,7 @@ public class Player : NetworkBehaviour
     {
         //If it's not your turn return void
         if (myTurn == false)
-            return;
-
-        //Get the other player
-        Player otherPlayer = getNextPlayer();
-
-        //Set the turn to other player
-        myTurn = false;
-        otherPlayer.myTurn = true;
+            return;  
 
         //send cmd to all clients
         RpcClientCommand(cmd);

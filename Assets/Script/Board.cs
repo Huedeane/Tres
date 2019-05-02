@@ -89,6 +89,7 @@ public class Board : NetworkBehaviour {
     [ClientRpc]
     public void RpcSetTurn()
     {
+        m_Manager.startScoreTrack = true;
         StartCoroutine(SetTurn());
     }
 
@@ -101,7 +102,6 @@ public class Board : NetworkBehaviour {
         string[] playerArray = paramPlayer.Split(',');
 
         Manager.UpdatePlayerList();
-        Debug.Log(Manager.PlayerList.Count);
 
         foreach (Player player in Manager.PlayerList)
         {
@@ -135,7 +135,6 @@ public class Board : NetworkBehaviour {
                     card.Hide();
                     card.IsInteractable = false;
                 }
-                   
 
                 card.MoveCard(player.GetComponentInChildren<Hand>().gameObject);
             }
@@ -146,15 +145,8 @@ public class Board : NetworkBehaviour {
 
     private IEnumerator SetTurn()
     {
-        yield return new WaitUntil(() => FinishDealing == true);
+           yield return new WaitUntil(() => FinishDealing == true);
         Manager.UpdatePlayerList();
-        foreach (Player player in Manager.PlayerList)
-        {
-            Debug.Log(player.playerNum);
-            Debug.Log(player.isLocalPlayer);
-            if (player.isLocalPlayer)
-                player.playerHand.SetHighlight();
-        }
         Manager.PlayerList[0].myTurn = true;
     }
     #endregion

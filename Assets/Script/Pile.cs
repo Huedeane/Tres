@@ -115,7 +115,7 @@ public class Pile : NetworkBehaviour, IZone {
 
     public void AddCard(GameObject cardObject)
     {
-        cardObject.transform.SetParent(this.transform, true);
+        cardObject.transform.SetParent(ZoneCardContent.transform, true);
         cardObject.GetComponent<RectTransform>().rotation = GetComponent<RectTransform>().rotation;
         UpdateCardList();
     }

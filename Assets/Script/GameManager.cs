@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -19,7 +20,8 @@ public class GameManager : NetworkBehaviour {
     [SyncVar]
     private int m_DeckSeed;
 
-    
+    public bool startScoreTrack = false;
+    public TextMeshProUGUI scoreText;
     
     #endregion
 
@@ -106,6 +108,12 @@ public class GameManager : NetworkBehaviour {
     {
         PlayerList = new List<Player>(PlayerListRef.transform.GetComponentsInChildren<Player>());
     }
+
+    private void Update()
+    {
+        if(startScoreTrack)
+        scoreText.text = Player.localPlayer.playerScore.ToString();
+    }
     #endregion
 
     #region Public Method
@@ -115,6 +123,7 @@ public class GameManager : NetworkBehaviour {
 
         if (isServer)
         {
+            
             Player.localPlayer.CmdServerCommand("Toggle Time");
 
             DeckSeed = Random.Range(1, 1000000);

@@ -129,24 +129,44 @@ public class Hand : MonoBehaviour, IZone
         ControlSizeWidth();
     }
 
-    public void SetHighlight()
+    public void SetHighlight(bool toggle)
     {
         HasAvailable = false;
+       
         if (transform.childCount > 0)
         {
             foreach (Transform child in transform)
             {
-                Transform innerChild = child.GetChild(0);
-                Card innerCard = innerChild.GetComponent<Card>();
-                Pile pile = GameObject.Find("Board").GetComponent<Board>().BoardPile;
-                if (innerCard.CheckValid(pile.GetTopCard()))
+                if (child.childCount == 0)
+                    Destroy(child.gameObject);
+                else
                 {
-                    innerCard.ToggleAvailable(true);
-                    HasAvailable = true;
-                }               
+                    Transform innerChild = child.GetChild(0);
+                    Card innerCard = innerChild.GetComponent<Card>();
+                    if (toggle)
+                    {
+                        Pile pile = GameObject.Find("Board").GetComponent<Board>().BoardPile;
+                        Debug.Log(Player.localPlayer.playerName + " Top Card: " + pile.GetTopCard().CardColor + " " + pile.GetTopCard().CardType);
+                        if (innerCard.CheckValid(pile.GetTopCard()))
+                        {
+                            innerCard.ToggleAvailable(true);
+                            HasAvailable = true;
+                        }
+                        else
+                        {
+                            innerCard.ToggleAvailable(false);
+                        }
+                    }
+                    else
+                    {
+                        innerCard.ToggleAvailable(false);
+                    }
+                }                        
             }
         }
     }
+
+
 
     public void AddCard(GameObject cardObject)
     {

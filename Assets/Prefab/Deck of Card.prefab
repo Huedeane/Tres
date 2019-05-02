@@ -445,8 +445,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -588,8 +593,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -731,8 +741,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -874,8 +889,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1007,8 +1027,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1150,8 +1175,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1293,8 +1323,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1436,8 +1471,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1574,8 +1614,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1712,8 +1757,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1850,8 +1900,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -1988,8 +2043,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2126,8 +2186,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2264,8 +2329,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2402,8 +2472,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2540,8 +2615,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2678,8 +2758,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2821,8 +2906,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -2964,8 +3054,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3107,8 +3202,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3250,8 +3350,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3393,8 +3498,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3536,8 +3646,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3679,8 +3794,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3822,8 +3942,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -3960,8 +4085,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4103,8 +4233,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4246,8 +4381,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4389,8 +4529,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4532,8 +4677,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4675,8 +4825,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4813,8 +4968,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -4956,8 +5116,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5099,8 +5264,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5242,8 +5412,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5380,8 +5555,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5523,8 +5703,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5666,8 +5851,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5809,8 +5999,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}
@@ -5952,8 +6147,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
         type: 3}
+      propertyPath: m_CardLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238128559481969039, guid: f8e55208da59da24d846adec58a2e60d,
+        type: 3}
       propertyPath: m_CardDescription
-      value: Regular card that can be play to card with the same number or color
+      value: Regular Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e55208da59da24d846adec58a2e60d, type: 3}

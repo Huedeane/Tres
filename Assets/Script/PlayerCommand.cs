@@ -37,12 +37,15 @@ public class PlayerCommand : MonoBehaviour
                 if (myPlayer.isLocalPlayer)
                 {
                     card.Reveal();
-                    myPlayer.playerHand.SetHighlight();
+                    card.IsInteractable = true;
                 }
                 else
                 {
                     card.Hide();
                 }
+
+                myPlayer.myTurn = false;
+                otherPlayer.myTurn = true;
                 break;
             case "Play Card":
                 Pile pile = GameObject.FindGameObjectWithTag("Pile").GetComponent<Pile>();
@@ -57,6 +60,9 @@ public class PlayerCommand : MonoBehaviour
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
                 hand.UpdateCardList();
+                Debug.Log("Top Card Change");
+                myPlayer.myTurn = false;
+                otherPlayer.myTurn = true;
                 break;
             case "Toggle Time":
                 GameObject.Find("Time").GetComponentInChildren<InfoTime>().ToggleTime();
@@ -83,13 +89,14 @@ public class PlayerCommand : MonoBehaviour
 
     public void playCmd()
     {
-        if (myPlayer.myTurn == true && myPlayer.playerHand.SelectedCard != null)
+        if (myPlayer.myTurn == true)
         {
+            myPlayer.playerScore += 50;
             myPlayer.CmdServerCommandTurn("Play Card:" + myPlayer.playerHand.SelectedCard.CardObjectId);         
         }
         else
         {
-            myPlayer.sendMessage("NOT YOUR TURN OR CARD NOT SELECTED");
+            myPlayer.sendMessage("NOT YOUR TURN");
         }
     }
 
@@ -107,8 +114,10 @@ public class PlayerCommand : MonoBehaviour
 
     public void drawCmd()
     {
-        if (myPlayer.myTurn == true && myPlayer.playerHand.HasAvailable == false)
+        // && myPlayer.playerHand.HasAvailable == false
+        if (myPlayer.myTurn == true)
         {
+            myPlayer.playerScore += 100;
             myPlayer.CmdServerCommandTurn("Draw Card");
         }
         else
