@@ -439,18 +439,21 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         if (CardColor == pileCard.CardColor)
         {
+            Debug.Log(CardColor + " = " + pileCard.CardColor);
             return true;
         }
         else if (CardColor == E_CardColor.Wild)
         {
+            Debug.Log(CardColor + " = Wild");
             return true;
         }
         else if (CardType == pileCard.CardType)
         {
+            Debug.Log(CardType + " = " + pileCard.CardType);
             return true;
         }
         else
-            return true;
+            return false;
     }
 
     public override string ToString()

@@ -155,6 +155,11 @@ public class Pile : NetworkBehaviour, IZone {
             }
         }
 
+        if (ZoneCardList.Count == 0)
+        {
+           Player.localPlayer.CmdServerCommand("End Game 2");
+        }
+
     }
 
     public void AddCard(GameObject cardObject)

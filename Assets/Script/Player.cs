@@ -17,6 +17,9 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public int playerNum, playerScore;
 
+    [SyncVar]
+    public E_CardColor playerWildColor;
+
     [SyncVar(hook = "OnTurnChange")]
     public bool myTurn;
 
@@ -30,16 +33,20 @@ public class Player : NetworkBehaviour
     public Text nameText;
     public Text messageText;
     public IEnumerator currentMessage;
+    public GameObject wildButton;
 
     public override void OnStartServer()
     {
 
         netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
+        
 
         int n = netMan.numPlayers;
         playerScore = 0;
         playerNum = n;
         playerName = "Player " + n;
+
+        playerWildColor = E_CardColor.Red;
 
         myTurn = false;
 
@@ -79,6 +86,10 @@ public class Player : NetworkBehaviour
         nameText.text = "P" + playerNum;
         playerScore = 0;
 
+        playerWildColor = E_CardColor.Red;
+        SetColor(playerWildColor);
+
+
         GameObject.Find("Game Manager").GetComponent<GameManager>().playerNum = localPlayerNum;
 
         if (isLocalPlayer)
@@ -93,7 +104,7 @@ public class Player : NetworkBehaviour
             foreach (Transform child in playerCommand.transform)
             {
                 if (child.name == "Play Button" || child.name == "Extra Button"
-                    || child.name == "Draw Button" || child.name == "Quit Button")
+                    || child.name == "Draw Button" || child.name == "Wild Button")
                 {
                     child.gameObject.SetActive(false);
                 }
@@ -101,6 +112,48 @@ public class Player : NetworkBehaviour
         }
 
 
+    }
+
+    void SetColor(E_CardColor cardColor)
+    {
+        switch (cardColor)
+        {
+            case E_CardColor.Blue:
+                wildButton.GetComponent<Image>().color = Color.blue;
+                break;
+            case E_CardColor.Green:
+                wildButton.GetComponent<Image>().color = Color.green;
+                break;
+            case E_CardColor.Red:
+                wildButton.GetComponent<Image>().color = Color.red;
+                break;
+            case E_CardColor.Yellow:
+                wildButton.GetComponent<Image>().color = Color.yellow;
+                break;
+        }
+    }
+
+    public void ChangeColor()
+    {
+        switch (playerWildColor)
+        {
+            case E_CardColor.Red:
+                playerWildColor = E_CardColor.Blue;
+                SetColor(playerWildColor);
+                break;
+            case E_CardColor.Blue:
+                playerWildColor = E_CardColor.Green;
+                SetColor(playerWildColor);
+                break;
+            case E_CardColor.Green:
+                playerWildColor = E_CardColor.Yellow;
+                SetColor(playerWildColor);
+                break;
+            case E_CardColor.Yellow:
+                playerWildColor = E_CardColor.Red;
+                SetColor(playerWildColor);
+                break;
+        }
     }
 
     

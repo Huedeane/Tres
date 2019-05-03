@@ -827,6 +827,11 @@ MonoBehaviour:
   MainGameBackground: {fileID: 5227735257015322988}
   VictoryTheme: {fileID: 2296930296727079381}
   DefeatTheme: {fileID: 2193174837145569074}
+  YourTurn: {fileID: 7586963095687265129}
+  UserJoin: {fileID: 8563286606923635240}
+  UserLeft: {fileID: 6987182411591854372}
+  DealCard: {fileID: 1146270427554845620}
+  ChatMessage: {fileID: 2969000229053495151}
   BackgroundMusic: {fileID: 9004566397731531521}
   SoundEffect: {fileID: 527842399}
   masterVolume: 0

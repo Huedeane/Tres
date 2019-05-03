@@ -93,6 +93,12 @@ public class Board : NetworkBehaviour {
         StartCoroutine(SetTurn());
     }
 
+    [ClientRpc]
+    public void RpcSetTurnWithNum(int num)
+    {
+        StartCoroutine(SetTurn(num));
+    }
+
 
 
     [ClientRpc]
@@ -185,8 +191,12 @@ public class Board : NetworkBehaviour {
     {
         yield return new WaitUntil(() => FinishDealing == true);
         Debug.Log("Finish Drawing");
-        Manager.PlayerList[playerNum - 1].playerHand.SetHighlight(true);
         Manager.PlayerList[playerNum - 1].myTurn = true;
+        Manager.PlayerList[playerNum - 1].getNextPlayer().myTurn = false;
+        if (isLocalPlayer)
+        {
+            Manager.PlayerList[playerNum - 1].playerHand.SetHighlight(true);
+        }
     }
     #endregion
 }

@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 1997586154185670514}
   - component: {fileID: 6937528251573651519}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: Wild Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -242,7 +242,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1997586154185670514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8066997826660183941}
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &564385171443926266
@@ -861,6 +872,7 @@ MonoBehaviour:
   playerName: 
   playerNum: 0
   playerScore: 0
+  playerWildColor: 0
   myTurn: 0
   netMan: {fileID: 0}
   playerCommand: {fileID: 6390911961711481580}
@@ -868,6 +880,7 @@ MonoBehaviour:
   playerNameBox: {fileID: 4942751271610700617}
   nameText: {fileID: 7755604056723140580}
   messageText: {fileID: 3496000755006669326}
+  wildButton: {fileID: 416431473133298081}
 --- !u!114 &875183343151291768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,9 +1232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
-
-'
+  m_Text: Wild
 --- !u!1 &8462509368621241357
 GameObject:
   m_ObjectHideFlags: 0

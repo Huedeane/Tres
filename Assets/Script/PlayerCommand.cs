@@ -29,9 +29,9 @@ public class PlayerCommand : MonoBehaviour
         switch (cmdName)
         {
             case "Draw Card":
-                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 1, 1f);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(myPlayer.playerNum.ToString(), 1, 1f);
                 myPlayer.myTurn = false;
-                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(otherPlayer.playerNum);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurnWithNum(otherPlayer.playerNum);
                 break;
             case "Play Card":
                 Pile pile = GameObject.FindGameObjectWithTag("Pile").GetComponent<Pile>();
@@ -82,7 +82,46 @@ public class PlayerCommand : MonoBehaviour
                         AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Defeat_Theme);
                     }
                         
-                }              
+                }
+                break;
+            case "End Game 2":
+                GameObject finishMenu2 = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().finishMenu;
+                finishMenu2.SetActive(true);
+
+                //other palyer win
+                if (myPlayer.playerHand.HandCardList.Count > otherPlayer.playerHand.HandCardList.Count)
+                {
+                    if (myPlayer.isLocalPlayer)
+                    {
+                        finishMenu2.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Defeat_Theme);
+
+                    }
+                    else
+                    {
+                        finishMenu2.GetComponentInChildren<TextMeshProUGUI>().SetText("You Win");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Victory_Theme);
+                    }
+
+                }
+                else if (myPlayer.playerHand.HandCardList.Count < otherPlayer.playerHand.HandCardList.Count)
+                {
+                    if (myPlayer.isLocalPlayer)
+                    {
+                        finishMenu2.GetComponentInChildren<TextMeshProUGUI>().SetText("You Win");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Victory_Theme);
+                    }
+                    else
+                    {
+                        finishMenu2.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Defeat_Theme);
+                    }
+                }
+                else
+                {
+                    finishMenu2.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                    AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Defeat_Theme);
+                }
                 break;
         }
 
@@ -96,14 +135,17 @@ public class PlayerCommand : MonoBehaviour
         switch (cardType)
         {
             case E_CardType.Draw_Two:
+                myPlayer.playerHand.SetHighlight(false);
                 GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 2, 1f);
-                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(myPlayer.playerNum);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurnWithNum(myPlayer.playerNum);
                 if (myPlayer.isLocalPlayer)
                     AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
                 break;
             case E_CardType.Draw_Four:
+                myPlayer.playerHand.SetHighlight(false);
                 GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 4, 1f);
-                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(myPlayer.playerNum);
+                GameObject.Find("Pile").GetComponent<Pile>().RpcSetColor(myPlayer.playerWildColor);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurnWithNum(myPlayer.playerNum);
                 if (myPlayer.isLocalPlayer)
                     AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
                 break;
@@ -117,6 +159,9 @@ public class PlayerCommand : MonoBehaviour
                     AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
                 break;
             case E_CardType.Change_Color:
+                GameObject.Find("Pile").GetComponent<Pile>().RpcSetColor(myPlayer.playerWildColor);
+                myPlayer.myTurn = false;
+                otherPlayer.myTurn = true;
                 break;
             default:
                 myPlayer.myTurn = false;
@@ -157,8 +202,7 @@ public class PlayerCommand : MonoBehaviour
 
     public void drawCmd()
     {
-        // && myPlayer.playerHand.HasAvailable == false
-        if (myPlayer.myTurn == true)
+        if (myPlayer.myTurn == true && myPlayer.playerHand.HasAvailable == false)
         {
             myPlayer.playerScore += 100;
             myPlayer.CmdServerCommandTurn("Draw Card");

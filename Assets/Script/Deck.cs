@@ -81,7 +81,6 @@ public class Deck : NetworkBehaviour
 
     private void Update()
     {
-        Debug.Log(ZoneCardContent.transform.childCount.ToString());
         m_ZoneAmountText.GetComponent<Text>().text = ZoneCardContent.transform.childCount.ToString();
     }
 
