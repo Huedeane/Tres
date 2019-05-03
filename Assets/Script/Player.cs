@@ -33,6 +33,7 @@ public class Player : NetworkBehaviour
 
     public override void OnStartServer()
     {
+
         netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
 
         int n = netMan.numPlayers;
@@ -44,6 +45,7 @@ public class Player : NetworkBehaviour
 
         if (n == 1)
         {
+            GameObject.Find("Game Manager").GetComponent<GameManager>().StartGameButton.SetActive(true);
             GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerConnected(1);
             CmdServerMessage("Player 1 Has Connected");
         }
@@ -53,25 +55,31 @@ public class Player : NetworkBehaviour
             
             GameObject.FindGameObjectWithTag("ChatInput").GetComponent<Chatbox>().CmdToggleChat();
             GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerConnected(2);
+            AudioManager.Instance.PlaySoundEffect(E_SoundEffect.User_Join);
             GameObject.Find("Game Manager").GetComponent<GameManager>().StartGameButton.SetActive(true);
             CmdServerMessage("Player 2 Has Connected");
         }
 
     }
 
-    void Start () {
+    void Start() {
         //Set Up Player
 
         netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
         netMan.GetComponent<NetworkManagerHUD>().showGUI = false;
 
+        
+        
         GameObject playerList = GameObject.Find("Player List");
+        Debug.Log(playerList);
         transform.SetParent(playerList.transform, false);
         transform.localPosition = Vector3.zero;
 
         int localPlayerNum = playerNum;
         nameText.text = "P" + playerNum;
         playerScore = 0;
+
+        GameObject.Find("Game Manager").GetComponent<GameManager>().playerNum = localPlayerNum;
 
         if (isLocalPlayer)
         {
@@ -84,7 +92,7 @@ public class Player : NetworkBehaviour
             transform.eulerAngles = new Vector3(0, 0, 180);
             foreach (Transform child in playerCommand.transform)
             {
-                if (child.name == "Play Button" || child.name == "Extra Button" 
+                if (child.name == "Play Button" || child.name == "Extra Button"
                     || child.name == "Draw Button" || child.name == "Quit Button")
                 {
                     child.gameObject.SetActive(false);
@@ -95,20 +103,35 @@ public class Player : NetworkBehaviour
 
     }
 
+    
+
+    public override void OnNetworkDestroy()
+    {
+
+        CmdServerMessage(playerName + " Disconnected");
+        GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerDisconnected(playerNum);
+        AudioManager.Instance.PlaySoundEffect(E_SoundEffect.User_Left);
+    }
+
 
     void OnChangeTextMessage(string msg)
     {
+        
         GameObject.FindGameObjectWithTag("Chatbox").GetComponent<TextMeshProUGUI>().text += msg + "\n";
     }
 
     void OnTurnChange(bool isTurn)
     {
-       
+
         if (isTurn)
-        {         
+        {
             playerNameBox.GetComponentInChildren<Image>().color = Color.red;
-            if(isLocalPlayer)
-            playerHand.SetHighlight(true);
+            if (isLocalPlayer)
+            {              
+                playerHand.SetHighlight(true);
+            }
+            AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
+
         }
         else
         {
@@ -122,6 +145,7 @@ public class Player : NetworkBehaviour
     [Command]
     public void CmdChatMessage(string message)
     {
+        AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Chat_Message);
         textMessage = playerName + ": " + message;
     }
 
@@ -143,10 +167,19 @@ public class Player : NetworkBehaviour
     {
         //If it's not your turn return void
         if (myTurn == false)
-            return;  
+            return;
 
         //send cmd to all clients
         RpcClientCommand(cmd);
+    }
+
+    [ClientRpc]
+    public void RpcDisconnectStatus(bool player1Status, bool player2Status)
+    {
+        if(player1Status)
+            GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerDisconnected(1);
+        if(player2Status)
+            GameObject.FindGameObjectWithTag("ConnectionStatus").GetComponent<InfoConnectionStatus>().CmdPlayerDisconnected(2);
     }
 
     [ClientRpc]
@@ -164,8 +197,8 @@ public class Player : NetworkBehaviour
 
     public void sendMessage(string message)
     {
-        
-        if(currentMessage != null)
+
+        if (currentMessage != null)
             StopCoroutine(currentMessage);
 
         currentMessage = sendMessage_IE(message);
@@ -204,6 +237,7 @@ public class Player : NetworkBehaviour
 
     public override string ToString()
     {
+
         return playerNum.ToString();
     }
 

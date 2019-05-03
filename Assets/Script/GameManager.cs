@@ -20,6 +20,9 @@ public class GameManager : NetworkBehaviour {
     [SyncVar]
     private int m_DeckSeed;
 
+    public TextMeshProUGUI player1Text;
+    public TextMeshProUGUI player2Text;
+    public int playerNum;
     public bool startScoreTrack = false;
     public TextMeshProUGUI scoreText;
     public GameObject finishMenu;
@@ -104,6 +107,14 @@ public class GameManager : NetworkBehaviour {
     #endregion
 
     #region Private Method
+    private void OnDisable()
+    {
+        if (playerNum == 2)
+        {
+            player1Text.text = "Player 1: Disconnected";
+            AudioManager.Instance.PlaySoundEffect(E_SoundEffect.User_Left);
+        }
+    }
 
     public void UpdatePlayerList()
     {
@@ -121,7 +132,7 @@ public class GameManager : NetworkBehaviour {
     [ClientRpc]
     public void RpcPlayMusic()
     {
-        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Main_Game_Background);
+        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Main_Game_Background);
     }
 
     public void StartGame()
@@ -130,7 +141,7 @@ public class GameManager : NetworkBehaviour {
 
         if (isServer)
         {
-            
+            GameObject.Find("Net Man").GetComponent<NetworkManager>().StopMatchMaker();
             Player.localPlayer.CmdServerCommand("Toggle Time");
 
             DeckSeed = Random.Range(1, 1000000);

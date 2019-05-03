@@ -45,6 +45,19 @@ public class InfoConnectionStatus : NetworkBehaviour {
         }
     }
 
+    [Command]
+    public void CmdSetStatus(int x, string status)
+    {
+        if (x == 1)
+        {
+            player1Status = status;
+        }
+        if (x == 2)
+        {
+            player2Status = status;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

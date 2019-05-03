@@ -29,23 +29,10 @@ public class PlayerCommand : MonoBehaviour
         switch (cmdName)
         {
             case "Draw Card":
-                deck = GameObject.FindGameObjectWithTag("Deck").GetComponent<Deck>();
-                card = deck.GetTopCard();
-                card.CardLocation = E_ZoneType.Hand;
-                card.MoveCard(GetComponentInChildren<Hand>().gameObject);
-
-                if (myPlayer.isLocalPlayer)
-                {
-                    card.Reveal();
-                    card.IsInteractable = true;
-                }
-                else
-                {
-                    card.Hide();
-                }
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 1, 1f);
 
                 myPlayer.myTurn = false;
-                otherPlayer.myTurn = true;
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(otherPlayer);
                 break;
             case "Play Card":
                 Pile pile = GameObject.FindGameObjectWithTag("Pile").GetComponent<Pile>();
@@ -59,12 +46,8 @@ public class PlayerCommand : MonoBehaviour
                 card.ToggleAvailable(false);
                 card.ToggleSelected(false);
                 card.MoveCard(pile.gameObject);
-                Debug.Log(card.CardColor + " " + card.CardType);
-                Debug.Log(hand.name);
-                Debug.Log(hand.GetComponentInParent<Player>().playerName);
                 hand.UpdateCardList();
-                myPlayer.myTurn = false;
-                otherPlayer.myTurn = true;
+                ProcessPlayingCard(card.CardType);
                 break;
             case "Toggle Time":
                 GameObject.Find("Time").GetComponentInChildren<InfoTime>().ToggleTime();
@@ -91,27 +74,56 @@ public class PlayerCommand : MonoBehaviour
                 {
                     if (myPlayer.isLocalPlayer)
                     {
-                        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Victory_Theme);
                         finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Win");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Victory_Theme);
                     }
                     else
                     {
-                        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Defeat_Theme);
                         finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
+                        AudioManager.Instance.ChangeBackground(E_BackGroundMusic.Defeat_Theme);
                     }
                         
-                }
-                else
-                {
-                    finishMenu.GetComponentInChildren<TextMeshProUGUI>().SetText("You Lose");
-                }
-
-               
+                }              
                 break;
         }
 
 
 
+    }
+
+    public void ProcessPlayingCard(E_CardType cardType)
+    {
+        Player otherPlayer = myPlayer.getNextPlayer();
+        switch (cardType)
+        {
+            case E_CardType.Draw_Two:
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 2, 1f);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(myPlayer);
+                if (myPlayer.isLocalPlayer)
+                    AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
+                break;
+            case E_CardType.Draw_Four:
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 4, 1f);
+                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(myPlayer);
+                if (myPlayer.isLocalPlayer)
+                    AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
+                break;
+            case E_CardType.Reverse:
+                myPlayer.myTurn = false;
+                otherPlayer.myTurn = true;
+                break;
+            case E_CardType.Skip:
+                myPlayer.playerHand.SetHighlight(true);
+                if (myPlayer.isLocalPlayer)
+                    AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
+                break;
+            case E_CardType.Change_Color:
+                break;
+            default:
+                myPlayer.myTurn = false;
+                otherPlayer.myTurn = true;
+                break;
+        }
     }
 
     public void playCmd()
@@ -121,9 +133,14 @@ public class PlayerCommand : MonoBehaviour
             myPlayer.playerScore += 50;
             myPlayer.CmdServerCommandTurn("Play Card:" + myPlayer.playerHand.SelectedCard.CardObjectId);         
         }
-        else
+        else if(myPlayer.myTurn == false)
         {
+            Debug.Log(myPlayer.myTurn);
             myPlayer.sendMessage("NOT YOUR TURN");
+        }
+        else if (myPlayer.playerHand.SelectedCard == null)
+        {
+            myPlayer.sendMessage("NO CARD SELECTED");
         }
     }
 
@@ -146,6 +163,10 @@ public class PlayerCommand : MonoBehaviour
         {
             myPlayer.playerScore += 100;
             myPlayer.CmdServerCommandTurn("Draw Card");
+        }
+        else if (myPlayer.myTurn != true)
+        {
+            myPlayer.sendMessage("NOT YOUR TURN");
         }
         else
         {

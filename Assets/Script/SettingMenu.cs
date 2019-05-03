@@ -13,16 +13,39 @@ public class SettingMenu : MonoBehaviour
     public Slider SoundEffectSlider;
     public Slider BackgroundSlider;
 
-    public NetworkManager netMan;
+
+    public void SetSlider()
+    {
+        AudioManager audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>(); ;
+        MasterSlider.value = audioManager.masterVolume;
+        SoundEffectSlider.value = audioManager.soundEffectVolume;
+        BackgroundSlider.value = audioManager.backgroundSliderVolume;
+    }
 
     public void ExitGame()
     {
+        NetworkManager netMan = GameObject.Find("Net Man").GetComponent<NetworkManager>();
+
+        if (Player.localPlayer != null)
+        {
+            if (Player.localPlayer.isServer)
+            {
+                netMan.StopHost();
+            }
+            else
+            {
+                netMan.StopClient();
+            }
+        }
+
         Destroy(netMan.gameObject);
         SceneManager.LoadScene("Main Menu");       
     }
 
     public void SetMasterVolume(float volume)
     {
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().masterVolume = volume;
+
         AudioControl.SetFloat("Master", volume);
         if (MasterSlider.value == -30)
         {
@@ -32,6 +55,8 @@ public class SettingMenu : MonoBehaviour
 
     public void SetSoundEffectsVolume(float volume)
     {
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().soundEffectVolume = volume;
+
         AudioControl.SetFloat("Sound Effect", volume);
         if (SoundEffectSlider.value == -30)
         {
@@ -40,6 +65,8 @@ public class SettingMenu : MonoBehaviour
     }
     public void SetBackgroundVolume(float volume)
     {
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().backgroundSliderVolume = volume;
+
         AudioControl.SetFloat("Background", volume);
         if (BackgroundSlider.value == -30)
         {

@@ -935,6 +935,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100191003}
   m_CullTransparentMesh: 0
+--- !u!82 &129789877 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7586963095687265129, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 527842397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242138536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1178,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242496348}
   m_CullTransparentMesh: 0
+--- !u!82 &331626938 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2969000229053495151, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 527842397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &458692473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1326,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7101961273902207989, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+        type: 3}
+      propertyPath: YourTurn
+      value: 
+      objectReference: {fileID: 129789877}
+    - target: {fileID: 7101961273902207989, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+        type: 3}
+      propertyPath: UserJoin
+      value: 
+      objectReference: {fileID: 1781132293}
+    - target: {fileID: 7101961273902207989, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+        type: 3}
+      propertyPath: UserLeft
+      value: 
+      objectReference: {fileID: 1933074989}
+    - target: {fileID: 7101961273902207989, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+        type: 3}
+      propertyPath: DealCard
+      value: 
+      objectReference: {fileID: 1988407068}
+    - target: {fileID: 7101961273902207989, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+        type: 3}
+      propertyPath: ChatMessage
+      value: 
+      objectReference: {fileID: 331626938}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf, type: 3}
 --- !u!1 &606429816
@@ -2065,7 +2102,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7f37b55f72ac7a84eb2c6b38472542af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71da1eaba4ffb1e40989a7bbd4311147, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2648,6 +2685,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742814722}
   m_CullTransparentMesh: 0
+--- !u!82 &1781132293 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8563286606923635240, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 527842397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1851531543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,6 +2792,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7491740716426375022}
+        m_MethodName: SetSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1851531546
@@ -2788,6 +2842,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851531543}
   m_CullTransparentMesh: 0
+--- !u!82 &1933074989 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6987182411591854372, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 527842397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1988407068 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1146270427554845620, guid: 0e8eedbc1cc9e4545938b3cdfbc14cdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 527842397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3941184517034249865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3941184517034249865, guid: cd2d5b88f00912145b6b079d6cbf9338,
@@ -2848,18 +2914,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1108782658}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2869,6 +2924,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 694926816}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -3224,3 +3290,15 @@ PrefabInstance:
       objectReference: {fileID: 694926816}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd2d5b88f00912145b6b079d6cbf9338, type: 3}
+--- !u!114 &7491740716426375022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3941184517034249866, guid: cd2d5b88f00912145b6b079d6cbf9338,
+    type: 3}
+  m_PrefabInstance: {fileID: 7491740716426375021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3941184517034249865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c25f5a4fa36e246a5684c7286ca839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

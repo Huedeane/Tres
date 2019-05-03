@@ -121,6 +121,7 @@ public class Hand : MonoBehaviour, IZone
                 else
                 {
                     Transform innerChild = child.GetChild(0);
+                    innerChild.GetComponent<Card>().CardLocation = E_ZoneType.Hand;
                     HandCardList.Add(innerChild.gameObject);
                 }
             }

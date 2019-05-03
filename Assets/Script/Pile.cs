@@ -13,8 +13,10 @@ public class Pile : NetworkBehaviour, IZone {
     private List<GameObject> m_ZoneCardList;
 
     [Header("Object Reference")]
-    [SerializeField] private Text m_ZoneAmountText;
+    [SerializeField] private Text m_ZoneCardColor;
     [SerializeField] private GameObject m_ZoneCardContent;
+
+    private E_CardColor m_TopCardColor;
     #endregion
 
     #region Getter & Setter
@@ -42,18 +44,6 @@ public class Pile : NetworkBehaviour, IZone {
             m_ZoneCardList = value;
         }
     }
-    public Text ZoneAmountText
-    {
-        get
-        {
-            return m_ZoneAmountText;
-        }
-
-        set
-        {
-            m_ZoneAmountText = value;
-        }
-    }
     public GameObject ZoneCardContent
     {
         get
@@ -64,6 +54,32 @@ public class Pile : NetworkBehaviour, IZone {
         set
         {
             m_ZoneCardContent = value;
+        }
+    }
+
+    public Text ZoneCardColor
+    {
+        get
+        {
+            return m_ZoneCardColor;
+        }
+
+        set
+        {
+            m_ZoneCardColor = value;
+        }
+    }
+
+    public E_CardColor TopCardColor
+    {
+        get
+        {
+            return m_TopCardColor;
+        }
+
+        set
+        {
+            m_TopCardColor = value;
         }
     }
     #endregion
@@ -77,7 +93,10 @@ public class Pile : NetworkBehaviour, IZone {
 
     public Card GetTopCard()
     {
-        return ZoneCardContent.transform.GetChild(ZoneCardContent.transform.childCount - 1).GetComponent<Card>();
+        Card TopCard = ZoneCardContent.transform.GetChild(ZoneCardContent.transform.childCount - 1).GetComponent<Card>();
+        TopCard.CardColor = TopCardColor;
+
+        return TopCard;
     }
 
     [ClientRpc]
@@ -87,13 +106,38 @@ public class Pile : NetworkBehaviour, IZone {
         Card card = ZoneCardContent.transform.GetChild(0).GetComponent<Card>();
         card.CardColor = (E_CardColor)Random.Range(0, 4);
         card.CardType = (E_CardType)Random.Range(0, 9);
+        RpcSetColor(card.CardColor);
         card.UpdateImage();
         card.Reveal();
     }
 
-    private void Update()
+    [ClientRpc]
+    public void RpcSetColor(E_CardColor cardColor)
     {
-        ZoneAmountText.GetComponent<Text>().text = (ZoneCardContent.transform.childCount - 1).ToString();
+        TopCardColor = cardColor;
+        switch (cardColor)
+        {
+            case E_CardColor.Blue:
+                ZoneCardColor.text = "Blue";
+                ZoneCardColor.color = Color.blue;
+                break;
+            case E_CardColor.Yellow:
+                ZoneCardColor.text = "Yellow";
+                ZoneCardColor.color = Color.yellow;
+                break;
+            case E_CardColor.Green:
+                ZoneCardColor.text = "Green";
+                ZoneCardColor.color = Color.green;
+                break;
+            case E_CardColor.Red:
+                ZoneCardColor.text = "Red";
+                ZoneCardColor.color = Color.red;
+                break;
+            case E_CardColor.Wild:
+                ZoneCardColor.text = "Wild";
+                ZoneCardColor.color = Color.black;
+                break;
+        }
     }
 
     private void UpdateCardList()
@@ -117,6 +161,7 @@ public class Pile : NetworkBehaviour, IZone {
     {
         cardObject.transform.SetParent(ZoneCardContent.transform, true);
         cardObject.GetComponent<RectTransform>().rotation = GetComponent<RectTransform>().rotation;
+        RpcSetColor(cardObject.GetComponent<Card>().CardColor);
         UpdateCardList();
     }
 }

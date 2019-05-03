@@ -11,8 +11,8 @@ public enum E_CardType
 {
     Zero = 0, One = 1, Two = 2, Three = 3,
     Four = 4, Five = 5, Six = 6, Seven = 7,
-    Eight = 8, Nine = 9, Reverse = 10, Draw = 11,
-    Skip = 12, Change_Color = 13, Draw_4 = 14, Draw_2 = 15
+    Eight = 8, Nine = 9, Reverse = 10, Skip = 11,
+    Change_Color = 12, Draw_Two = 13, Draw_Four = 14
 }
 
 public enum E_ZoneType { Hand, Deck, Pile }
@@ -250,6 +250,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         string cardColor = m_CardColor.ToString();
         string cardType = m_CardType.ToString().Replace("_", " ");
 
+        if(!m_ImageAtlas.GetSprite(cardColor + " " + cardType))
+            Debug.Log(cardColor + " " + cardType + "\nDraw 2");
+
         m_FrontImage = m_ImageAtlas.GetSprite(cardColor + " " + cardType);
         m_BackImage = m_ImageAtlas.GetSprite("Back Cover");
 
@@ -438,7 +441,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             return true;
         }
-        else if (pileCard.CardColor == E_CardColor.Wild)
+        else if (CardColor == E_CardColor.Wild)
         {
             return true;
         }
@@ -447,7 +450,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             return true;
         }
         else
-            return false;
+            return true;
     }
 
     public override string ToString()

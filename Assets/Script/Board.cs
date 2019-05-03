@@ -94,8 +94,16 @@ public class Board : NetworkBehaviour {
     }
 
     [ClientRpc]
+    public void RpcSetTurn(Player player)
+    {
+        m_Manager.startScoreTrack = true;
+        StartCoroutine(SetTurn(player));
+    }
+
+    [ClientRpc]
     public void RpcDealCard(string paramPlayer, int paramAmount, float paramDuration)
     {
+        Debug.Log("Dealing Card " + paramPlayer);
         FinishDealing = false;
 
         List<Player> playerList = new List<Player>();
@@ -107,6 +115,7 @@ public class Board : NetworkBehaviour {
         {
             foreach (string playerA in playerArray)
             {
+                Debug.Log(playerA);
                 if (playerA.Equals(player.ToString()))
                 {
                     playerList.Add(player);
@@ -117,9 +126,35 @@ public class Board : NetworkBehaviour {
         StartCoroutine(DealCard_IE(playerList, paramAmount, paramDuration));
         
     }
-   
-    private IEnumerator DealCard_IE(List<Player> playerList, int amount, float waitTime)
+
+    public IEnumerator DealCard_IE(Player player, int amount, float waitTime)
     {
+        AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Deal_Card);
+        for (int x = 0; x < amount; x++)
+        {
+            Card card = BoardDeck.GetTopCard();
+
+            if (player.isLocalPlayer)
+            {
+                card.Reveal();
+                card.IsInteractable = true;
+            }
+            else
+            {
+                card.Hide();
+                card.IsInteractable = false;
+            }
+
+            card.MoveCard(player.GetComponentInChildren<Hand>().gameObject);
+            yield return new WaitForSeconds(waitTime);
+        }
+        AudioManager.Instance.DealCard.Stop();
+        FinishDealing = true;
+    }
+
+    public IEnumerator DealCard_IE(List<Player> playerList, int amount, float waitTime)
+    {
+        AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Deal_Card);
         for (int x = 0; x < amount; x++)
         {
             foreach (Player player in playerList)
@@ -140,6 +175,7 @@ public class Board : NetworkBehaviour {
             }
             yield return new WaitForSeconds(waitTime);
         }
+        AudioManager.Instance.DealCard.Stop();
         FinishDealing = true;
     }
 
@@ -148,6 +184,14 @@ public class Board : NetworkBehaviour {
            yield return new WaitUntil(() => FinishDealing == true);
         Manager.UpdatePlayerList();
         Manager.PlayerList[0].myTurn = true;
+    }
+
+    private IEnumerator SetTurn(Player player)
+    {
+        yield return new WaitUntil(() => FinishDealing == true);
+        Debug.Log("Finish Drawing");
+        Manager.PlayerList[player.playerNum - 1].playerHand.SetHighlight(true);
+        Manager.PlayerList[player.playerNum-1].myTurn = true;
     }
     #endregion
 }

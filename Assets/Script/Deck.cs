@@ -102,6 +102,7 @@ public class Deck : NetworkBehaviour
 
         foreach (Transform card in ZoneCardContent.transform)
         {
+            card.GetComponent<Card>().Hide();
             m_ZoneCardList.Add(card.gameObject);
         }
     }
