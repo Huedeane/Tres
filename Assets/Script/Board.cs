@@ -93,12 +93,7 @@ public class Board : NetworkBehaviour {
         StartCoroutine(SetTurn());
     }
 
-    [ClientRpc]
-    public void RpcSetTurn(Player player)
-    {
-        m_Manager.startScoreTrack = true;
-        StartCoroutine(SetTurn(player));
-    }
+
 
     [ClientRpc]
     public void RpcDealCard(string paramPlayer, int paramAmount, float paramDuration)
@@ -186,12 +181,12 @@ public class Board : NetworkBehaviour {
         Manager.PlayerList[0].myTurn = true;
     }
 
-    private IEnumerator SetTurn(Player player)
+    private IEnumerator SetTurn(int playerNum)
     {
         yield return new WaitUntil(() => FinishDealing == true);
         Debug.Log("Finish Drawing");
-        Manager.PlayerList[player.playerNum - 1].playerHand.SetHighlight(true);
-        Manager.PlayerList[player.playerNum-1].myTurn = true;
+        Manager.PlayerList[playerNum - 1].playerHand.SetHighlight(true);
+        Manager.PlayerList[playerNum - 1].myTurn = true;
     }
     #endregion
 }

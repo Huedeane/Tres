@@ -262,8 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bf8223f4b467145b3b9154f652a2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ZoneType: 0
-  m_ZoneAmountText: {fileID: 0}
+  m_ZoneType: 2
+  m_ZoneCardColor: {fileID: 0}
   m_ZoneCardContent: {fileID: 3973196330850152786}
 --- !u!1 &3973196330850152786
 GameObject:

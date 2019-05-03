@@ -30,9 +30,8 @@ public class PlayerCommand : MonoBehaviour
         {
             case "Draw Card":
                 GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 1, 1f);
-
                 myPlayer.myTurn = false;
-                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(otherPlayer);
+                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(otherPlayer.playerNum);
                 break;
             case "Play Card":
                 Pile pile = GameObject.FindGameObjectWithTag("Pile").GetComponent<Pile>();
@@ -98,13 +97,13 @@ public class PlayerCommand : MonoBehaviour
         {
             case E_CardType.Draw_Two:
                 GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 2, 1f);
-                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(myPlayer);
+                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(myPlayer.playerNum);
                 if (myPlayer.isLocalPlayer)
                     AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
                 break;
             case E_CardType.Draw_Four:
                 GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcDealCard(otherPlayer.playerNum.ToString(), 4, 1f);
-                GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurn(myPlayer);
+                //GameObject.Find("Game Manager").GetComponent<GameManager>().GameBoard.RpcSetTurns(myPlayer.playerNum);
                 if (myPlayer.isLocalPlayer)
                     AudioManager.Instance.PlaySoundEffect(E_SoundEffect.Your_Turn);
                 break;
