@@ -31,9 +31,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource SoundEffect;
 
     [Header("Volume")]
-    public float masterVolume = 0;
-    public float soundEffectVolume = 0;
-    public float backgroundSliderVolume = 0;
+    public float masterVolume = -15;
+    public float soundEffectVolume = -15;
+    public float backgroundSliderVolume = -15;
 
     private void Awake()
     {
