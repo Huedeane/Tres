@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\GameSettingMenu.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
+    <Compile Include="Assets\Script\Player.cs" />
     <None Include="Assets\Asset Store Import\Temp.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

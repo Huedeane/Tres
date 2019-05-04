@@ -120,7 +120,7 @@ public class AudioManager : MonoBehaviour
 
     #region Getter & Setter
     public AudioMixer GameMixer { get => m_GameMixer; set => m_GameMixer = value; }
-    public AudioSource BackgroundMusic { get => BackgroundMusic; set => BackgroundMusic = value; }
+    public AudioSource BackgroundMusic { get => m_BackgroundMusic; set => m_BackgroundMusic = value; }
     public AudioClip MainMenuBackground { get => m_MainMenuBackground; set => m_MainMenuBackground = value; }
     public AudioClip GameWaiting { get => m_GameWaiting; set => m_GameWaiting = value; }
     public AudioClip GameBackground { get => m_GameBackground; set => m_GameBackground = value; }

@@ -557,21 +557,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3be4901703245548b40799ea62956a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMixer: {fileID: 24100000, guid: 963e8623e9b38854bbeb5781655f5e56, type: 2}
-  backgroundMusic: {fileID: 6432176206692760935}
-  mainMenuBackground: {fileID: 8300000, guid: 3c586d60c60084343a9b29af79d77202, type: 3}
-  gameWaiting: {fileID: 8300000, guid: d30c3b17acbb4654ba4b3c4f2ad2c0d7, type: 3}
-  gameBackground: {fileID: 8300000, guid: 52fcf287a970236419911b02302cfeea, type: 3}
-  victoryTheme: {fileID: 8300000, guid: 75a217cd0d4f2054ab6d3784453de662, type: 3}
-  defeatTheme: {fileID: 8300000, guid: 62e3708bfe2ca394c803f1486934813e, type: 3}
-  yourTurn: {fileID: 197870559949357739}
-  userJoin: {fileID: 7179586152339335162}
-  userLeft: {fileID: 6200735675941050281}
-  dealCard: {fileID: 337954734580611470}
-  chatMessage: {fileID: 5301385546811065319}
-  masterVolume: 0
-  soundEffectVolume: 0
-  musicSliderVolume: 0
+  m_GameMixer: {fileID: 24100000, guid: 963e8623e9b38854bbeb5781655f5e56, type: 2}
+  m_BackgroundMusic: {fileID: 6432176206692760935}
+  m_MainMenuBackground: {fileID: 8300000, guid: 3c586d60c60084343a9b29af79d77202,
+    type: 3}
+  m_GameWaiting: {fileID: 8300000, guid: d30c3b17acbb4654ba4b3c4f2ad2c0d7, type: 3}
+  m_GameBackground: {fileID: 8300000, guid: 52fcf287a970236419911b02302cfeea, type: 3}
+  m_VictoryTheme: {fileID: 8300000, guid: 75a217cd0d4f2054ab6d3784453de662, type: 3}
+  m_DefeatTheme: {fileID: 8300000, guid: 62e3708bfe2ca394c803f1486934813e, type: 3}
+  m_YourTurn: {fileID: 197870559949357739}
+  m_UserJoin: {fileID: 7179586152339335162}
+  m_UserLeft: {fileID: 6200735675941050281}
+  m_DealCard: {fileID: 337954734580611470}
+  m_ChatMessage: {fileID: 5301385546811065319}
+  m_MasterVolume: 0
+  m_SoundEffectVolume: 0
+  m_MusicSliderVolume: 0
 --- !u!82 &6432176206692760935
 AudioSource:
   m_ObjectHideFlags: 0

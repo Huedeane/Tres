@@ -8,6 +8,8 @@ public enum E_EventName
     Player_Join
 };
 
+
+
 public class EventManager : MonoBehaviour
 {
     #region Variable
