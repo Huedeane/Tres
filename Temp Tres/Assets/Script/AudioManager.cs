@@ -10,34 +10,32 @@ public enum E_SoundEffect { YourTurn, UserJoin, UserLeft, DealCard, ChatMessage 
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static AudioManager Instance;
 
     [Header("Aduio Mixer")]
-    [SerializeField] private AudioMixer gameMixer;
+    [SerializeField] private AudioMixer m_GameMixer;
 
     [Header("Current BGM Playing")]
-    [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] private AudioSource m_BackgroundMusic;
 
     [Header("Background Music")]
-    [SerializeField] private AudioClip mainMenuBackground;
-    [SerializeField] private AudioClip gameWaiting;
-    [SerializeField] private AudioClip gameBackground;
-    [SerializeField] private AudioClip victoryTheme;
-    [SerializeField] private AudioClip defeatTheme;
+    [SerializeField] private AudioClip m_MainMenuBackground;
+    [SerializeField] private AudioClip m_GameWaiting;
+    [SerializeField] private AudioClip m_GameBackground;
+    [SerializeField] private AudioClip m_VictoryTheme;
+    [SerializeField] private AudioClip m_DefeatTheme;
 
     [Header("Sound Effect Reference")]
-    [SerializeField] private AudioSource yourTurn;
-    [SerializeField] private AudioSource userJoin;
-    [SerializeField] private AudioSource userLeft;
-    [SerializeField] private AudioSource dealCard;
-    [SerializeField] private AudioSource chatMessage;
+    [SerializeField] private AudioSource m_YourTurn;
+    [SerializeField] private AudioSource m_UserJoin;
+    [SerializeField] private AudioSource m_UserLeft;
+    [SerializeField] private AudioSource m_DealCard;
+    [SerializeField] private AudioSource m_ChatMessage;
 
     [Header("Volume")]
-    [SerializeField] private float masterVolume = 0;
-    [SerializeField] private float soundEffectVolume = 0;
-    [SerializeField] private float musicSliderVolume = 0;
-
-    
+    [SerializeField] private float m_MasterVolume = 0;
+    [SerializeField] private float m_SoundEffectVolume = 0;
+    [SerializeField] private float m_MusicSliderVolume = 0;
 
     private void Awake()
     {
@@ -118,24 +116,23 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    
+
 
     #region Getter & Setter
-    public static AudioManager Instance { get => instance; set => instance = value; }
-    public AudioMixer GameMixer { get => gameMixer; set => gameMixer = value; }
-    public AudioSource BackgroundMusic { get => backgroundMusic; set => backgroundMusic = value; }
-    public AudioClip MainMenuBackground { get => mainMenuBackground; set => mainMenuBackground = value; }
-    public AudioClip GameWaiting { get => gameWaiting; set => gameWaiting = value; }
-    public AudioClip GameBackground { get => gameBackground; set => gameBackground = value; }
-    public AudioClip VictoryTheme { get => victoryTheme; set => victoryTheme = value; }
-    public AudioClip DefeatTheme { get => defeatTheme; set => defeatTheme = value; }
-    public AudioSource YourTurn { get => yourTurn; set => yourTurn = value; }
-    public AudioSource UserJoin { get => userJoin; set => userJoin = value; }
-    public AudioSource UserLeft { get => userLeft; set => userLeft = value; }
-    public AudioSource DealCard { get => dealCard; set => dealCard = value; }
-    public AudioSource ChatMessage { get => chatMessage; set => chatMessage = value; }
-    public float MasterVolume { get => masterVolume; set => masterVolume = value; }
-    public float SoundEffectVolume { get => soundEffectVolume; set => soundEffectVolume = value; }
-    public float MusicSliderVolume { get => musicSliderVolume; set => musicSliderVolume = value; }
+    public AudioMixer GameMixer { get => m_GameMixer; set => m_GameMixer = value; }
+    public AudioSource BackgroundMusic { get => BackgroundMusic; set => BackgroundMusic = value; }
+    public AudioClip MainMenuBackground { get => m_MainMenuBackground; set => m_MainMenuBackground = value; }
+    public AudioClip GameWaiting { get => m_GameWaiting; set => m_GameWaiting = value; }
+    public AudioClip GameBackground { get => m_GameBackground; set => m_GameBackground = value; }
+    public AudioClip VictoryTheme { get => m_VictoryTheme; set => m_VictoryTheme = value; }
+    public AudioClip DefeatTheme { get => m_DefeatTheme; set => m_DefeatTheme = value; }
+    public AudioSource YourTurn { get => m_YourTurn; set => m_YourTurn = value; }
+    public AudioSource UserJoin { get => m_UserJoin; set => m_UserJoin = value; }
+    public AudioSource UserLeft { get => m_UserLeft; set => m_UserLeft = value; }
+    public AudioSource DealCard { get => m_DealCard; set => m_DealCard = value; }
+    public AudioSource ChatMessage { get => m_ChatMessage; set => m_ChatMessage = value; }
+    public float MasterVolume { get => m_MasterVolume; set => m_MasterVolume = value; }
+    public float SoundEffectVolume { get => m_SoundEffectVolume; set => m_SoundEffectVolume = value; }
+    public float MusicSliderVolume { get => m_MusicSliderVolume; set => m_MusicSliderVolume = value; }    
     #endregion
 }

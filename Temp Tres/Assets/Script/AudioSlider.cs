@@ -6,55 +6,55 @@ using UnityEngine.UI;
 public class AudioSlider : MonoBehaviour
 {
     #region Variable
-    [SerializeField] private Slider masterSlider;
-    [SerializeField] private Slider musicSlider;
-    [SerializeField] private Slider soundEffectSlider;
+    [SerializeField] private Slider m_MasterSlider;
+    [SerializeField] private Slider m_MusicSlider;
+    [SerializeField] private Slider m_SoundEffectSlider;
     #endregion
 
     public void SetSlider()
     {
-        MasterSlider.value = AudioManager.instance.MasterVolume;
-        SoundEffectSlider.value = AudioManager.instance.SoundEffectVolume;
-        MusicSlider.value = AudioManager.instance. MusicSliderVolume;
+        MasterSlider.value = AudioManager.Instance.MasterVolume;
+        SoundEffectSlider.value = AudioManager.Instance.SoundEffectVolume;
+        MusicSlider.value = AudioManager.Instance. MusicSliderVolume;
     }
 
     public void SetMasterVolume(float volume)
     {
-        AudioManager.instance.MasterVolume = volume;
+        AudioManager.Instance.MasterVolume = volume;
 
-        AudioManager.instance.GameMixer.SetFloat("Master", volume);
+        AudioManager.Instance.GameMixer.SetFloat("Master", volume);
         if (MasterSlider.value == -30)
         {
-            AudioManager.instance.GameMixer.SetFloat("Master", -80);
+            AudioManager.Instance.GameMixer.SetFloat("Master", -80);
         }
     }
 
     public void SetMusicVolume(float volume)
     {
-        AudioManager.instance.MusicSliderVolume = volume;
+        AudioManager.Instance.MusicSliderVolume = volume;
 
-        AudioManager.instance.GameMixer.SetFloat("Music", volume);
+        AudioManager.Instance.GameMixer.SetFloat("Music", volume);
         if (MusicSlider.value == -30)
         {
-            AudioManager.instance.GameMixer.SetFloat("Music", -80);
+            AudioManager.Instance.GameMixer.SetFloat("Music", -80);
         }
     }
 
     public void SetSoundEffectsVolume(float volume)
     {
-        AudioManager.instance.SoundEffectVolume = volume;
+        AudioManager.Instance.SoundEffectVolume = volume;
 
-        AudioManager.instance.GameMixer.SetFloat("Sound Effect", volume);
+        AudioManager.Instance.GameMixer.SetFloat("Sound Effect", volume);
         if (SoundEffectSlider.value == -30)
         {
-            AudioManager.instance.GameMixer.SetFloat("Sound Effect", -80);
+            AudioManager.Instance.GameMixer.SetFloat("Sound Effect", -80);
         }
     }
-    
+
 
     #region Getter & Setter
-    public Slider MasterSlider { get => masterSlider; set => masterSlider = value; }
-    public Slider MusicSlider { get => musicSlider; set => musicSlider = value; }
-    public Slider SoundEffectSlider { get => soundEffectSlider; set => soundEffectSlider = value; }
+    public Slider MasterSlider { get => m_MasterSlider; set => m_MasterSlider = value; }
+    public Slider MusicSlider { get => m_MusicSlider; set => m_MusicSlider = value; }
+    public Slider SoundEffectSlider { get => m_SoundEffectSlider; set => m_SoundEffectSlider = value; }
     #endregion
 }
